@@ -16,10 +16,6 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -35,4 +31,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Appbar {
+  height: 5vh;
+  position: fixed;
+  float: top;
+  width: 100%;
+  text-align: left;
+  background-color: #5E687A;
+}
+
+.Appbar > button {
+  cursor: pointer;
+  border: 1px solid #282c34;
+  background-color: transparent;
+  height: 100%;
+  min-width: 150px;
+  font-size: 1em;
+  transition-duration: 0.2s;
+}
+
+.Appbar > button:hover {
+  background-color: #282c34;
+}
+
+.Appbar > [aria-selected="true"] {
+  background: #282c34;
+}
+
+.App-content {
+  min-height: 95vh;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  display: flex;
+  flex-direction: column;
 }
