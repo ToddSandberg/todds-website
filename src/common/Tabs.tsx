@@ -3,6 +3,7 @@ import React from 'react'
 import Home from "../home/Home";
 import Appbar from "./Appbar";
 import AboutMe from "../aboutme/AboutMe";
+import Projects from "../projects/Projects";
 
 export default function Tabs() {
     return <Tab.Group>
@@ -18,7 +19,7 @@ export default function Tabs() {
           <div className="App-content">
             <Tab.Panel><Home/></Tab.Panel>
             <Tab.Panel><AboutMe/></Tab.Panel>
-            <Tab.Panel>Content 3</Tab.Panel>
+            <Tab.Panel><Projects/></Tab.Panel>
           </div>
         </Tab.Panels>
       </Tab.Group>;

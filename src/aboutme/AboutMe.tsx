@@ -8,7 +8,7 @@ export default function AboutMe() {
         <p>
             I'm a full stack developer who likes to make cool things (I think so at least). 
             Over my career I helped build various software products at Amazon from web apps for delivery stations to creating back end workflows for enabling sub same day and global package delivery to Alexa presence detection technology. 
-            I've also worked on various passion projects, which I invite you to explore <a href="">here</a>.
+            I've also worked on various passion projects, which I invite you to explore the <b><u>Projects</u></b> tab.
         </p>
     </div>;
 }
