@@ -1,0 +1,11 @@
+export const background1 = {
+    r: 40,
+    g: 44,
+    b: 52
+}
+
+export const background2 = {
+    r: 224,
+    g: 184,
+    b: 52
+}

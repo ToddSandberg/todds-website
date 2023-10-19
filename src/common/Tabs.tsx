@@ -5,19 +5,23 @@ import Appbar from "./Appbar";
 import AboutMe from "../aboutme/AboutMe";
 import Projects from "../projects/Projects";
 
-export default function Tabs() {
+type Props = {
+  color?: string
+}
+
+export default function Tabs({color}: Props) {
     return <Tab.Group>
         <Tab.List>
-          <div className="Appbar">
-            <Tab>Home</Tab>
-            <Tab>About Me</Tab>
-            <Tab>Projects</Tab>
+          <div className="Appbar" style={{backgroundColor: color }}>
+            <Tab style={{color: color}}>Home</Tab>
+            <Tab style={{color: color}}>About Me</Tab>
+            <Tab style={{color: color}}>Projects</Tab>
           </div>
         </Tab.List>
         <Tab.Panels>
           <Appbar/>
           <div className="App-content">
-            <Tab.Panel><Home/></Tab.Panel>
+            <Tab.Panel><Home color={color}/></Tab.Panel>
             <Tab.Panel><AboutMe/></Tab.Panel>
             <Tab.Panel><Projects/></Tab.Panel>
           </div>

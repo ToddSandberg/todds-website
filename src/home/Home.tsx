@@ -1,14 +1,19 @@
 import React from 'react'
-import logo from './logo.svg';
+import {ReactComponent as Logo} from '../svgs/hills.svg';
 
-export default function Home() {
+type Props = {
+  color?: string
+}
 
-    return <><img src={logo} className="App-logo" alt="logo" />
+export default function Home({color}: Props) {
+
+    return <>
+    <Logo fill={color} className="Hills" />
     <p>
       Edit <code>src/App.js</code> and save to reload.
     </p>
     <a
-      className="App-link"
+      style={{color: color}}
       href="https://reactjs.org"
       target="_blank"
       rel="noopener noreferrer"
