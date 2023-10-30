@@ -9,3 +9,15 @@ export const background2 = {
     g: 184,
     b: 52
 }
+
+export const blueBackground = {
+    r: 32,
+    g: 187,
+    b: 230
+}
+
+export const orangeBackground = {
+    r: 240,
+    g: 168,
+    b: 26
+}
