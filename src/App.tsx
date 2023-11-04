@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Tabs from './common/Tabs';
 import Slider from './common/Slider';
-import { background1, background2, blueBackground, orangeBackground } from './constants/colors';
+import { background1, background2, blueBackground, orangeBackground, whitishColor } from './constants/colors';
 
 function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
   return ((colorValue2 - colorValue1)*(sliderValue/100))+colorValue1;
@@ -41,12 +41,18 @@ function App() {
     b: background1.b
   });
 
+  const [ textColor, setTextColor ] = useState({
+    r: whitishColor.r,
+    g: whitishColor.g,
+    b: whitishColor.b
+  });
+
   const [ currentPercent, setCurrentPercent ] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header" style={{
-        color: `rgb(${color1.r}, ${color1.g}, ${color1.b})`,
+        color: `rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`,
         backgroundColor: `rgb(${background.r}, ${background.g}, ${background.b})`
       }}>
         <div className="Sun" style={{
@@ -57,7 +63,10 @@ function App() {
           top: fetchSunTop(currentPercent, 50, 750),
           right: `${fetchSunLeft(currentPercent)}%`
         }}></div>
-        <Tabs color={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}/>
+        <Tabs
+          backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
+          textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
+        />
         <Slider
           value={currentPercent}
           onChange={(value) => {
@@ -70,6 +79,11 @@ function App() {
               r: fetchColorFromPercent3(background1.r, orangeBackground.r, blueBackground.r, value),
               g: fetchColorFromPercent3(background1.g, orangeBackground.g, blueBackground.g, value),
               b: fetchColorFromPercent3(background1.b, orangeBackground.b, blueBackground.b, value)
+            });
+            setTextColor({
+              r: fetchColorFromPercent(whitishColor.r, background1.r, value),
+              g: fetchColorFromPercent(whitishColor.g, background1.g, value),
+              b: fetchColorFromPercent(whitishColor.b, background1.b, value)
             });
             setCurrentPercent(value);
           }}

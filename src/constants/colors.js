@@ -21,3 +21,9 @@ export const orangeBackground = {
     g: 168,
     b: 26
 }
+
+export const whitishColor = {
+    r: 221,
+    g: 230,
+    b: 227
+}
