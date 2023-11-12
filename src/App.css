@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -44,6 +48,11 @@
     transform: rotate(360deg);
   }
 }*/
+
+[role = menu] {
+  font-size: 15px;
+  color: #282c34;
+}
 
 .Appbar {
   height: 5vh;

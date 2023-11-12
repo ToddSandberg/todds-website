@@ -3,6 +3,7 @@ import React from 'react'
 import Appbar from "./Appbar";
 import AboutMe from "../aboutme/AboutMe";
 import Projects from "../projects/Projects";
+import ProjectsMenu from "./ProjectsMenu";
 
 type Props = {
   backgroundColor?: string,
@@ -14,7 +15,7 @@ export default function Tabs({backgroundColor, textColor}: Props) {
         <Tab.List>
           <div className="Appbar" style={{backgroundColor: backgroundColor }}>
             <Tab style={{color: textColor}}>About Me</Tab>
-            <Tab style={{color: textColor}}>Projects</Tab>
+            <ProjectsMenu/>
           </div>
         </Tab.List>
         <Tab.Panels>
