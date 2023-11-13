@@ -3,6 +3,7 @@ import './App.css';
 import Tabs from './common/Tabs';
 import Slider from './common/Slider';
 import { background1, background2, blueBackground, orangeBackground, whitishColor } from './constants/colors';
+import AboutMe from './aboutme/AboutMe';
 
 function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
   return ((colorValue2 - colorValue1)*(sliderValue/100))+colorValue1;
@@ -66,7 +67,8 @@ function App() {
         <Tabs
           backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
           textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
-        />
+        >
+          <AboutMe backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}/>
         <Slider
           value={currentPercent}
           onChange={(value) => {
@@ -88,6 +90,7 @@ function App() {
             setCurrentPercent(value);
           }}
         />
+        </Tabs>
       </header>
     </div>
   );

@@ -1,9 +1,11 @@
 import React from 'react'
 import scryportal from './scryportal.png';
 import Divider from '../common/Divider';
+import Tabs from '../common/Tabs';
 
-export default function Projects() {
+export default function ScryPortal() {
     return <div>
+        <Tabs>
         <h1>Projects</h1>
         <Divider/>
         <div className='Project-Panel'>
@@ -17,5 +19,6 @@ export default function Projects() {
             </div>
         </div>
         <Divider/>
+        </Tabs>
     </div>;
 }

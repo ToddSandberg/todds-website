@@ -19,7 +19,7 @@ export default function ProjectsMenu() {
                         {({ active }) => (
                         <a
                             className={`${active && 'bg-blue-500'}`}
-                            href="/account-settings"
+                            href="/scryportal"
                         >
                             Scry Portal
                         </a>
@@ -31,7 +31,7 @@ export default function ProjectsMenu() {
                         {({ active }) => (
                         <a
                             className={`${active && 'bg-blue-500'}`}
-                            href="/account-settings"
+                            href="/weaponsmithSimulator"
                         >
                             Weaponsmith Simulator
                         </a>
