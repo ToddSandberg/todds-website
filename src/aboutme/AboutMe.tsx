@@ -1,5 +1,6 @@
 import React from 'react'
 import me from './me.jpg';
+import github from './github.png';
 import {ReactComponent as Logo} from '../svgs/hills.svg';
 
 type Props = {
@@ -15,6 +16,12 @@ export default function AboutMe({backgroundColor}: Props) {
             Over my career I helped build various software products at Amazon from web apps for delivery stations to creating back end workflows for enabling sub same day and global package delivery to Alexa presence detection technology. 
             I've also worked on various passion projects, which I invite you to explore the <b><u>Projects</u></b> tab.
         </p>
+        <a href="https://www.linkedin.com/in/todd-sandberg/" style={{display: 'inline'}}>
+            <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="Linkedin profile" style={{width: 50, height: 50, display: 'inline'}}/>
+        </a>
+        <a href="https://github.com/ToddSandberg" style={{display: 'inline'}}>
+            <img src={github} alt="Github profile" style={{width: 50, height: 50, display: 'inline'}}/>
+        </a>
         <Logo fill={backgroundColor} className="Hills" />
     </div>;
 }
