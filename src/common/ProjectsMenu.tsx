@@ -1,7 +1,12 @@
 import { Menu, Transition } from '@headlessui/react';
 import React, { Fragment } from 'react'
 
-export default function ProjectsMenu() {
+type Props = {
+    backgroundColor?: string,
+    color?: string
+}
+
+export default function ProjectsMenu({ backgroundColor, color }: Props) {
     return <Menu as="div" className="relative inline-block text-left">
         <Menu.Button>Projects</Menu.Button>
         <Transition
@@ -13,7 +18,10 @@ export default function ProjectsMenu() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-            <Menu.Items className="absolute mt-2 w-56 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+            <Menu.Items
+                className="absolute mt-2 w-56 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+                style={{ backgroundColor, color }}
+            >
                 <div className="px-1 py-1 ">
                     <Menu.Item>
                         {({ active }) => (

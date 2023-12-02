@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 type Props = {
     value: number,
@@ -7,6 +7,10 @@ type Props = {
 
 export default function Slider({value, onChange}: Props) {
     const [ sliderValue, setSliderValue ] = useState(value);
+
+    useEffect(() => {
+        setSliderValue(value);
+    }, [value]);
 
     return <div className="range-slider">
         <input

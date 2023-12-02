@@ -1,0 +1,24 @@
+# November 2023
+
+Below is an overview of the different changes I've been making in various projects.
+
+### ScryPortal
+See projects tab for details.
+- Added an button to priorization to choose if its ascending or descending
+
+### Domu Peak
+This is an old project I've rekindled with a bit. The initial implementation was focused on creating a weather system in the Unity engine that was somewhat
+realistic based on the time of day and year.
+- move to new unity input system
+
+### Procedural Generation
+I've had an interest in procedural generation this month. My first attempt was following Sebastian Lague tutorials in Unity to create a very basic map with perlin noise.
+As an experiment, and to help me understand the code better, I then attempted to transfer this procedural generation to Godot.
+
+### 64 Days
+Another old project I've rekindled with. This game is my dream RPG to make, and so I've been trying to work on small improvements here and there when I can.
+- Added the ability to switch loadouts with a press of a button
+
+### SteamChievos
+This is a project to track achievements in various platforms (despite the name).
+- Cache game info for gog in steam chievos

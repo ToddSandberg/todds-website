@@ -14,7 +14,7 @@ export default function Tabs({ backgroundColor, textColor, children }: Props) {
         <Tab.List>
           <div className="Appbar" style={{backgroundColor: backgroundColor }}>
             <Tab style={{color: textColor}}><a href="/">About Me</a></Tab>
-            <ProjectsMenu/>
+            <ProjectsMenu color={textColor} backgroundColor={backgroundColor}/>
           </div>
         </Tab.List>
         <Tab.Panels>

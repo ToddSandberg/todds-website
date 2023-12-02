@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Tabs from './common/Tabs';
 import Slider from './common/Slider';
 import { background1, background2, blueBackground, orangeBackground, whitishColor } from './constants/colors';
 import AboutMe from './aboutme/AboutMe';
+import { getRandomInt } from './common/CommonFunctions';
 
 function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
   return ((colorValue2 - colorValue1)*(sliderValue/100))+colorValue1;
@@ -50,6 +51,30 @@ function App() {
 
   const [ currentPercent, setCurrentPercent ] = useState(0);
 
+  const changePercentage = useCallback((value: number) => {
+    setColor1({
+      r: fetchColorFromPercent(background1.r, background2.r, value),
+      g: fetchColorFromPercent(background1.g, background2.g, value),
+      b: fetchColorFromPercent(background1.b, background2.b, value)
+    });
+    setBackground({
+      r: fetchColorFromPercent3(background1.r, orangeBackground.r, blueBackground.r, value),
+      g: fetchColorFromPercent3(background1.g, orangeBackground.g, blueBackground.g, value),
+      b: fetchColorFromPercent3(background1.b, orangeBackground.b, blueBackground.b, value)
+    });
+    setTextColor({
+      r: fetchColorFromPercent(whitishColor.r, background1.r, value),
+      g: fetchColorFromPercent(whitishColor.g, background1.g, value),
+      b: fetchColorFromPercent(whitishColor.b, background1.b, value)
+    });
+    setCurrentPercent(value);
+  }, [setColor1, setBackground, setTextColor, setCurrentPercent]);
+
+  // Random starting location
+  useEffect(() => {
+    changePercentage(getRandomInt(100));
+  }, [ changePercentage ]);
+
   return (
     <div className="App">
       <header className="App-header" style={{
@@ -58,38 +83,25 @@ function App() {
       }}>
         <div className="Sun" style={{
           top: fetchSunTop(currentPercent, 750, 50),
-          left: `${fetchSunLeft(currentPercent)}%`
+          left: `${fetchSunLeft(currentPercent)}%`,
+          position: 'absolute',
+          zIndex: '0'
         }}></div>
         <div className="Moon" style={{
           top: fetchSunTop(currentPercent, 50, 750),
-          right: `${fetchSunLeft(currentPercent)}%`
+          right: `${fetchSunLeft(currentPercent)}%`,
+          position: 'absolute',
+          zIndex: '0'
         }}></div>
         <Tabs
           backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
           textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
         >
           <AboutMe backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}/>
-        <Slider
-          value={currentPercent}
-          onChange={(value) => {
-            setColor1({
-              r: fetchColorFromPercent(background1.r, background2.r, value),
-              g: fetchColorFromPercent(background1.g, background2.g, value),
-              b: fetchColorFromPercent(background1.b, background2.b, value)
-            });
-            setBackground({
-              r: fetchColorFromPercent3(background1.r, orangeBackground.r, blueBackground.r, value),
-              g: fetchColorFromPercent3(background1.g, orangeBackground.g, blueBackground.g, value),
-              b: fetchColorFromPercent3(background1.b, orangeBackground.b, blueBackground.b, value)
-            });
-            setTextColor({
-              r: fetchColorFromPercent(whitishColor.r, background1.r, value),
-              g: fetchColorFromPercent(whitishColor.g, background1.g, value),
-              b: fetchColorFromPercent(whitishColor.b, background1.b, value)
-            });
-            setCurrentPercent(value);
-          }}
-        />
+          <Slider
+            value={currentPercent}
+            onChange={(value) => changePercentage(value)}
+          />
         </Tabs>
       </header>
     </div>
