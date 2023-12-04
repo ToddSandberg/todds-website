@@ -7,8 +7,8 @@ type Props = {
 }
 
 export default function ProjectsMenu({ backgroundColor, color }: Props) {
-    return <Menu as="div" className="relative inline-block text-left">
-        <Menu.Button>Projects</Menu.Button>
+    return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
+        <Menu.Button className="astext" style={{color, fontSize: "1em", textAlign: 'center', width: 150}}>Projects</Menu.Button>
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"
@@ -19,14 +19,14 @@ export default function ProjectsMenu({ backgroundColor, color }: Props) {
           leaveTo="transform opacity-0 scale-95"
         >
             <Menu.Items
-                className="absolute mt-2 w-56 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none"
+                className="Dropdown"
                 style={{ backgroundColor, color }}
             >
-                <div className="px-1 py-1 ">
+                <div className="DropdownItem">
                     <Menu.Item>
                         {({ active }) => (
                         <a
-                            className={`${active && 'bg-blue-500'}`}
+                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
                             href="/scryportal"
                         >
                             Scry Portal
@@ -34,11 +34,11 @@ export default function ProjectsMenu({ backgroundColor, color }: Props) {
                         )}
                     </Menu.Item>
                 </div>
-                <div className="px-1 py-1 ">
+                <div className="DropdownItem">
                     <Menu.Item>
                         {({ active }) => (
                         <a
-                            className={`${active && 'bg-blue-500'}`}
+                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
                             href="/weaponsmithSimulator"
                         >
                             Weaponsmith Simulator

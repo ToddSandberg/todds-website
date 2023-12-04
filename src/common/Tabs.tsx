@@ -13,7 +13,7 @@ export default function Tabs({ backgroundColor, textColor, children }: Props) {
     return <Tab.Group>
         <Tab.List>
           <div className="Appbar" style={{backgroundColor: backgroundColor }}>
-            <Tab style={{color: textColor}}><a href="/">About Me</a></Tab>
+            <Tab style={{backgroundColor}}><a style={{color: textColor, textDecoration: 'none'}} href="/">About Me</a></Tab>
             <ProjectsMenu color={textColor} backgroundColor={backgroundColor}/>
           </div>
         </Tab.List>
