@@ -5,12 +5,18 @@ import App from './App';
 import ScryPortal from './projects/ScryPortal';
 import Weaponsmith from './projects/Weaponsmith';
 import Blog from './blog/Blog';
+import AboutMe from './aboutme/AboutMe';
 
 export default function Routing() {
     const router = createBrowserRouter([
         {
             path: '/',
             element: <App />,
+            errorElement: <FourOhFour />
+        },
+        {
+            path: '/aboutme',
+            element: <AboutMe />,
             errorElement: <FourOhFour />
         },
         {

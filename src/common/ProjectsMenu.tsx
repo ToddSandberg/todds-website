@@ -3,10 +3,11 @@ import React, { Fragment } from 'react'
 
 type Props = {
     backgroundColor?: string,
-    color?: string
+    color?: string,
+    dropdownClass?: string
 }
 
-export default function ProjectsMenu({ backgroundColor, color }: Props) {
+export default function ProjectsMenu({ backgroundColor, color, dropdownClass }: Props) {
     return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
         <Menu.Button className="astext" style={{color, fontSize: "1em", textAlign: 'center', width: 150}}>Projects</Menu.Button>
         <Transition
@@ -19,7 +20,7 @@ export default function ProjectsMenu({ backgroundColor, color }: Props) {
           leaveTo="transform opacity-0 scale-95"
         >
             <Menu.Items
-                className="Dropdown"
+                className={dropdownClass ? dropdownClass : "Dropdown"}
                 style={{ backgroundColor, color }}
             >
                 <div className="DropdownItem">
