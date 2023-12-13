@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import FourOhFour from './404';
 import App from './App';
 import ScryPortal from './projects/ScryPortal';
-import Weaponsmith from './projects/Weaponsmith';
+import Weaponsmith from './projects/Weaponsmith/Weaponsmith';
 import Blog from './blog/Blog';
 import AboutMe from './aboutme/AboutMe';
 

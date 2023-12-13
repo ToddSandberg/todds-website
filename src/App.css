@@ -1,4 +1,9 @@
 
+@font-face {
+  font-family: 'bit';
+  src: url(./basis33.otf) format('opentype');
+}
+
 .App {
   text-align: center;
 }
@@ -58,6 +63,7 @@
   width: 100%;
   text-align: left;
   background-color: #5E687A;
+  font-family: bit;
 }
 
 .Appbar > button {
@@ -68,6 +74,7 @@
   min-width: 150px;
   font-size: 1em;
   transition-duration: 0.2s;
+  font-family: bit;
 }
 
 .Appbar > button:hover {
@@ -89,6 +96,7 @@
   vertical-align: center;
   display: flex;
   flex-direction: column;
+  font-family: bit;
 }
 
 .Project-Panel {
@@ -131,6 +139,7 @@
 
 .Dropdown {
   position: absolute;
+  font-family: bit;
   width: 56;
   border-radius: 50;
   transform-origin: top left;
@@ -148,10 +157,12 @@
   padding-right: 0.25rem; /* 4px */
   padding-top: 0.25rem; /* 4px */
   padding-bottom: 0.25rem; /* 4px */
+  font-family: bit;
 }
 
 .DropdownItem > a {
   text-decoration: none;
+  font-family: bit;
 }
 
 .astext {
@@ -160,4 +171,5 @@
   margin:0;
   padding:0;
   cursor: pointer;
+  font-family: bit;
 }

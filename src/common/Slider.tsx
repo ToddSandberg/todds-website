@@ -12,7 +12,7 @@ export default function Slider({value, onChange}: Props) {
         setSliderValue(value);
     }, [value]);
 
-    return <div className="range-slider">
+    return <div className="range-slider" style={{zIndex: 4}}>
         <input
             type="range"
             value={sliderValue}
