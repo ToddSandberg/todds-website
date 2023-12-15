@@ -14,9 +14,9 @@ export default function Weaponsmith() {
         >
             <h1>Projects</h1>
             <Divider/>
-            <div className='Project-Panel'>
+            <div>
                 <h3>Weaponsmith</h3>
-                <div className='Project-Row'>
+                <div>
                     <p>TODO</p>
                 </div>
             </div>

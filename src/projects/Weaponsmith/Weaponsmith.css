@@ -11,13 +11,17 @@
     float: top;
     width: 100%;
     text-align: left;
-    background-color: #DBD8C5;
-    color: #2B2B27;
+    background-color: #1d2a52;
+    color: #bdb6c6;
     font-family: bit;
   }
 
   .Weaponsmith-Appbar > a:link, a:visited {
-    color: #2B2B27;
+    color: #bdb6c6;
+  }
+
+  .Weaponsmith-Appbar > a:hover {
+    color: #1d2a52;
   }
   
   .Weaponsmith-Appbar > button {
@@ -33,27 +37,31 @@
   }
   
   .Weaponsmith-Appbar > button:hover {
-    background-color: #FCF8E3;
-    color: #2B2B27;
+    background-color: #bdb6c6;
+    color: #1d2a52;
   }
   
   .Weaponsmith-Appbar > [aria-selected="true"] {
-    background: #FCF8E3;
-    color: #2B2B27;
+    background: #bdb6c6;
+    color: #1d2a52;
   }
   
   .Weaponsmith-Appbar > [aria-selected="false"] {
-    color: #2B2B27 !important;
+    color: #1d2a52 !important;
   }
   
   .Weaponsmith-App-content {
-    min-height: 50vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
     vertical-align: center;
     display: flex;
     flex-direction: column;
-    color: #2B2B27;
+    color: #bdb6c6;
+    background-image: url("./WeaponsmithBackground.png");
+    background-color: #1d2a52;
+    background-repeat: no-repeat;
+    background-size: 100vw, 100vh;
   }
   
   .Weaponsmith {
