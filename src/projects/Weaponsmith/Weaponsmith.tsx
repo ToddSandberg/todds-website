@@ -12,13 +12,14 @@ export default function Weaponsmith() {
             appContentClass='Weaponsmith-App-content'
             dropdownClass='Weaponsmith-Dropdown'
         >
-            <h1>Projects</h1>
-            <Divider/>
-            <div>
-                <h3>Weaponsmith</h3>
-                <div>
-                    <p>TODO</p>
-                </div>
+            <div className='Weaponsmith-Panel'>
+                    <h3>Weaponsmith Simulator</h3>
+                    <p>Weaponsmith simulator is a game revolving around playing as a blacksmith who crafts weapons for mighty heroes.
+                        Originally created for the GMTK 2023 game jam.
+                    </p>
+            </div>
+            <div className='Weaponsmith-Panel'>
+                <a href='https://monkeyyouwho.itch.io/weaponsmith-simulator'>Play now on itch.io</a>
             </div>
             <Divider/>
         </Tabs>
