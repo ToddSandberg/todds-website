@@ -165,11 +165,14 @@
   font-family: bit;
 }
 
-.astext {
-  background:none;
-  border:none;
-  margin:0;
-  padding:0;
-  cursor: pointer;
+.mainfont {
   font-family: bit;
+}
+
+.astext {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }

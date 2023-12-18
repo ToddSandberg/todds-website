@@ -4,12 +4,21 @@ import React, { Fragment } from 'react'
 type Props = {
     backgroundColor?: string,
     color?: string,
-    dropdownClass?: string
+    dropdownClass?: string,
+    fontClass?: string
 }
 
-export default function ProjectsMenu({ backgroundColor, color, dropdownClass }: Props) {
+export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fontClass }: Props) {
+    const thisFontClass = fontClass ? fontClass : "mainfont";
+    console.log(thisFontClass);
+
     return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
-        <Menu.Button className="astext" style={{color, fontSize: "1em", textAlign: 'center', width: 150}}>Projects</Menu.Button>
+        <Menu.Button
+            className={`astext ${thisFontClass}`}
+            style={{color, fontSize: "1em", textAlign: 'center', width: 150}}
+        >
+            Projects
+        </Menu.Button>
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"
@@ -20,8 +29,8 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass }: 
           leaveTo="transform opacity-0 scale-95"
         >
             <Menu.Items
-                className={dropdownClass ? dropdownClass : "Dropdown"}
                 style={{ backgroundColor, color }}
+                className={dropdownClass ? dropdownClass : "Dropdown"}
             >
                 <div className="DropdownItem">
                     <Menu.Item>

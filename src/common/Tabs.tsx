@@ -10,7 +10,8 @@ type Props = {
   selectedTab?: TabType,
   appBarClass?: string,
   appContentClass?: string,
-  dropdownClass?: string
+  dropdownClass?: string,
+  fontClass?: string
 }
 
 export enum TabType {
@@ -27,7 +28,7 @@ function getTabIndex(selectedTab?: TabType) {
   }
 }
 
-export default function Tabs({ backgroundColor, textColor, children, selectedTab, appBarClass, appContentClass, dropdownClass }: Props) {
+export default function Tabs({ backgroundColor, textColor, children, selectedTab, appBarClass, appContentClass, dropdownClass, fontClass }: Props) {
     const linkStyle = textColor ? {color: textColor, textDecoration: 'none'} : {textDecoration: 'none'}
 
     return <Tab.Group defaultIndex={getTabIndex(selectedTab)}>
@@ -35,7 +36,7 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
           <div className={appBarClass ? appBarClass : 'Appbar'} style={{backgroundColor: backgroundColor }}>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
-            <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass}/></Tab>
+            <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
           </div>
         </Tab.List>
         <Tab.Panels>
