@@ -4,6 +4,11 @@
   src: url(./basis33.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url(./RobotoSlab.ttf) format('opentype');
+}
+
 .App {
   text-align: center;
 }

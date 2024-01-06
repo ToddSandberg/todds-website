@@ -24,13 +24,13 @@
     min-width: 150px;
     font-size: 1em;
     transition-duration: 0.2s;
-    color: #2B2B27;
+    color: #7288a2;
     font-family: bit;
   }
   
   .About-Me-Appbar > button:hover {
     background-color: #FCF8E3;
-    color: #2B2B27;
+    color: #7288a2;
   }
   
   .About-Me-Appbar > [aria-selected="true"] {
@@ -44,25 +44,26 @@
   
   .About-Me-App-content {
     min-height: 50vh;
-    align-items: center;
-    justify-content: center;
-    vertical-align: center;
     display: flex;
     flex-direction: column;
-    color: #2B2B27;
+    color: #7288a2;
+    font-family: RobotoSlab;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   
   .About-Me {
     background-color: #FCF8E3;
     min-height: 100vh;
     font-size: calc(10px + 2vmin);
-    color: #2B2B27;
+    color: #7288a2;
   }
   
   .About-Me > p {
     font-size: 24px;
     margin-left: 50px;
     margin-right: 50px;
+    text-align: left;
   }
   
   .Me-Photo {

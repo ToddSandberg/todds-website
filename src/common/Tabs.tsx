@@ -2,6 +2,8 @@ import { Tab } from "@headlessui/react";
 import React from 'react'
 import Appbar from "./Appbar";
 import ProjectsMenu from "./ProjectsMenu";
+import LinkedInIcon from "./LinkedInIcon";
+import GithubIcon from "./GithubIcon";
 
 type Props = {
   backgroundColor?: string,
@@ -37,7 +39,11 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
             <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
-          </div>
+            <div style={{ float: 'right' }}>
+              <LinkedInIcon/>
+              <GithubIcon/>
+            </div>
+          </div>\
         </Tab.List>
         <Tab.Panels>
           <Appbar/>

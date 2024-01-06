@@ -18,18 +18,6 @@ function fetchColorFromPercent3(colorValue1: number, colorValue2: number, colorV
   }
 }
 
-function fetchSunTop(percent: number, startingTop: number, endingTop: number) {
-  return ((endingTop - startingTop)*(percent/100))+startingTop;
-}
-
-function fetchSunLeft(percent: number) {
-  const startingLeft = 10;
-  const endingLeft = 40;
-
-  // Parabolic function where 100% = 1, 50% = 0, 0% = 1
-  return endingLeft*(Math.pow(percent-50, 2)/2500) + startingLeft;
-}
-
 function App() {
   const [ color1, setColor1 ] = useState({
     r: background1.r,
@@ -51,6 +39,21 @@ function App() {
 
   const [ currentPercent, setCurrentPercent ] = useState(0);
 
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+
+      // 0 should be window.inngerHeight
+      changePercentage((position / (window.document.body.offsetHeight - window.innerHeight)) * 100);
+  };
+
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
+
   const changePercentage = useCallback((value: number) => {
     setColor1({
       r: fetchColorFromPercent(background1.r, background2.r, value),
@@ -71,36 +74,20 @@ function App() {
   }, [setColor1, setBackground, setTextColor, setCurrentPercent]);
 
   // Random starting location
-  useEffect(() => {
+  /*useEffect(() => {
     changePercentage(getRandomInt(100));
-  }, [ changePercentage ]);
+  }, [ changePercentage ]);*/
 
   return <div className="App">
       <header className="App-header" style={{
         color: `rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`,
         backgroundColor: `rgb(${background.r}, ${background.g}, ${background.b})`
       }}>
-        <div className="Sun" style={{
-          top: fetchSunTop(currentPercent, 750, 50),
-          left: `${fetchSunLeft(currentPercent)}%`,
-          position: 'absolute',
-          zIndex: '0'
-        }}></div>
-        <div className="Moon" style={{
-          top: fetchSunTop(currentPercent, 50, 750),
-          right: `${fetchSunLeft(currentPercent)}%`,
-          position: 'absolute',
-          zIndex: '0'
-        }}></div>
         <Tabs
           backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
           textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
         >
-          <Home backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}/>
-          <Slider
-            value={currentPercent}
-            onChange={(value) => changePercentage(value)}
-          />
+          <Home backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`} currentPercent={currentPercent}/>
         </Tabs>
       </header>
     </div>;
