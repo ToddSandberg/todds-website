@@ -5,6 +5,7 @@ import Slider from './common/Slider';
 import { background1, background2, blueBackground, orangeBackground, whitishColor } from './constants/colors';
 import { getRandomInt } from './common/CommonFunctions';
 import Home from './home/Home';
+import SunAndMoon from './home/SunAndMoon';
 
 function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
   return ((colorValue2 - colorValue1)*(sliderValue/100))+colorValue1;
