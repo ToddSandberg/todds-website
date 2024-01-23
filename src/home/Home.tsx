@@ -2,6 +2,9 @@ import React from 'react'
 import {ReactComponent as Hills} from '../svgs/hills.svg';
 import {ReactComponent as House} from '../svgs/house.svg';
 import SunAndMoon from './SunAndMoon';
+import scryportal from '../projects/ScryPortal/scryportal.png';
+import weaponsmith from '../projects/Weaponsmith/WeaponsmithBackground.png';
+import amazonlogo from '../aboutme/amazonlogo.jpg';
 
 type Props = {
     backgroundColor?: string,
@@ -16,14 +19,26 @@ export default function Home({backgroundColor, currentPercent}: Props) {
         <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
             <div style={{zIndex: '2', color:'#282c34', backgroundColor: 'white', width: 500}}>
                 <p style={{padding: 20}}>I'm passionate about developing...</p>
-                <div style={{ paddingBottom: 600 }}>
+                <div>
+                    Websites
+                </div>
+                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
+                    <a href={"/scryportal"}><img src={scryportal} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="productivity website" /></a>
+                </div>
+                <div>
                     Video Games
                 </div>
-                <div style={{ paddingBottom: 600 }}>
-                    Video Games
+                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
+                    <a href={"/weaponsmithSimulator"}><img src={weaponsmith} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="weaponsmith simulator game" /></a>
                 </div>
-                <div style={{ paddingBottom: 600 }}>
+                <div>
                     Industry Grade Software
+                </div>
+                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
+                    <a href={"/aboutme"}><img src={amazonlogo} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="more about me" /></a>
+                </div>
+                <div style={{ paddingBottom: 600 }}>
+                    Still not convinced?
                 </div>
             </div>
         </div>
