@@ -17,7 +17,7 @@ export default function Home({backgroundColor, currentPercent}: Props) {
         <h3 style={{fontFamily: 'bit'}}>Welcome to my website.</h3>
         <SunAndMoon currentPercent={currentPercent}/>
         <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
-            <div style={{zIndex: '2', color:'#282c34', backgroundColor: 'white', width: 500}}>
+            <div style={{zIndex: 3, color:'#282c34', backgroundColor: 'white', width: 500}}>
                 <p style={{padding: 20}}>I'm passionate about developing...</p>
                 <div>
                     Websites
@@ -42,9 +42,9 @@ export default function Home({backgroundColor, currentPercent}: Props) {
                 </div>
             </div>
         </div>
-        <div style={{position: 'sticky', bottom: '0', overflow: 'clip', zIndex: '1'}}>
-            <Hills fill={backgroundColor} className="Hills" style={{zIndex: '1', position: 'sticky', width: '100%', bottom: '0'}}/>
-            <House fill={backgroundColor} className="House" style={{zIndex: '2', position: 'sticky', width: '100%', bottom: '-1', left: '0'}}/>
+        <div style={{ position: 'sticky', bottom: '0', overflow: 'clip', zIndex: 1, height: '40%' }}>
+            <Hills fill={backgroundColor} className="Hills" style={{ zIndex: 1, bottom: 0, position: 'absolute' }}/>
+            <House fill={backgroundColor} className="House" style={{ bottom: 0, left: 0, position: 'sticky' }}/>
         </div>
     </div>;
 }

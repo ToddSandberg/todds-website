@@ -19,15 +19,18 @@
 }
 
 .Hills {
-  position: absolute;
   width: 100%;
-  height: 100vh;
   left: 0;
-  top: 0;
+  bottom: 0;
   margin-left: 0;
   padding-left: 0;
   pointer-events: none;
   vertical-align: bottom;
+}
+
+.House {
+  position: absolute;
+  z-index: 2;
 }
 
 /*@media (prefers-reduced-motion: no-preference) {
