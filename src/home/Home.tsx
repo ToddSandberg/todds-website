@@ -38,9 +38,6 @@ export default function Home({backgroundColor, currentPercent}: Props) {
                 <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
                     <a href={"/aboutme"}><img src={amazonlogo} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="more about me" /></a>
                 </div>
-                <div style={{ paddingBottom: 600 }}>
-                    Still not convinced?
-                </div>
             </div>
         </div>
         <div style={{ position: 'sticky', bottom: '0', overflow: 'clip', zIndex: 1, height: '40%' }}>
