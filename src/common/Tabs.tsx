@@ -1,6 +1,5 @@
 import { Tab } from "@headlessui/react";
 import React from 'react'
-import Appbar from "./Appbar";
 import ProjectsMenu from "./ProjectsMenu";
 import LinkedInIcon from "./LinkedInIcon";
 import GithubIcon from "./GithubIcon";
@@ -46,7 +45,6 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
           </div>\
         </Tab.List>
         <Tab.Panels>
-          <Appbar/>
           <div className={appContentClass ? appContentClass : 'App-content'} style={{color: textColor}}>
             {children}
           </div>

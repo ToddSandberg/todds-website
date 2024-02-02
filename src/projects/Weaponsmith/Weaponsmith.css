@@ -78,7 +78,7 @@
   }
   
   .Weaponsmith-Dropdown {
-    background-color: #FCF8E3;
+    background-color: #bdb6c6;
     position: absolute;
     width: 56;
     border-radius: 50;
@@ -96,7 +96,7 @@
     color: #1d2a52;
     background: url("./WeaponsmithPanel.png") no-repeat;
     background-size: 100% 100%;
-    max-width: 200px;
+    max-width: 500px;
     padding: 40px;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;

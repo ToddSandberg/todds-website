@@ -25,6 +25,7 @@ export default function Home({backgroundColor, currentPercent}: Props) {
                 <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
                     <a href={"/scryportal"}><img src={scryportal} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="productivity website" /></a>
                 </div>
+                <p style={{fontSize: '14px'}}>And the website you are currently on, see the source code <a href="https://github.com/ToddSandberg/todds-website">here</a></p>
                 <div>
                     Video Games
                 </div>
