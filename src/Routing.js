@@ -6,6 +6,7 @@ import ScryPortal from './projects/ScryPortal/ScryPortal';
 import Weaponsmith from './projects/Weaponsmith/Weaponsmith';
 import Blog from './blog/Blog';
 import AboutMe from './aboutme/AboutMe';
+import Contact from './contact/Contact';
 
 export default function Routing() {
     const router = createBrowserRouter([
@@ -27,6 +28,11 @@ export default function Routing() {
         {
             path: '/weaponsmithSimulator',
             element: <Weaponsmith />,
+            errorElement: <FourOhFour />
+        },
+        {
+            path: '/contact',
+            element: <Contact />,
             errorElement: <FourOhFour />
         },
         {

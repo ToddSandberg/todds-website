@@ -2,26 +2,49 @@ import React, { useEffect, useState } from 'react'
 import Tabs from '../common/Tabs';
 import Divider from '../common/Divider';
 import Markdown from 'react-markdown';
-import raw from './November2023.txt';
+import november from './November2023.txt';
+import december from './December2023.txt';
+import january from './January2024.txt';
+
+const blogEntryList = [
+    january,
+    december,
+    november
+]
 
 export default function Blog() {
     const [ entries, setEntries ] = useState<string[]>([]);
 
+    const resolveEntries = async () => {
+        const resolveEntries: string[] = [];
+
+        for (const indexIGuess in blogEntryList) {
+            const newEntry = blogEntryList[indexIGuess];
+            await fetch(newEntry)
+                .then((r) => r.text())
+                .then((text: string) => {
+                    console.log(text);
+                    resolveEntries.push(text);
+                })
+        }
+
+        setEntries(resolveEntries);
+    };
+
     useEffect(() => {
-        fetch(raw)
-            .then((r) => r.text())
-            .then((text: string) => {
-                console.log(text);
-                setEntries([ text ]);
-            }) 
+        resolveEntries();
     }, []);
+
+    if (entries.length === 0) {
+        return 'loading';
+    }
 
     return <div className="Blog">
         <Tabs>
         <h1>Blog</h1>
         <Divider/>
         <div>
-            {entries.map((entry) => <Markdown>{entry}</Markdown>)}
+            {entries.map((entry, index) => <Markdown key={'blogItem'+index}>{entry}</Markdown>)}
         </div>
     </Tabs>
 </div>;

@@ -18,16 +18,21 @@ type Props = {
 export enum TabType {
   HOME,
   ABOUTME,
-  PROJECTS
+  PROJECTS,
+  CONTACT
 }
 
 function getTabIndex(selectedTab?: TabType) {
   switch(selectedTab) {
     case TabType.ABOUTME: return 1;
     case TabType.PROJECTS: return 2;
+    case TabType.CONTACT: return 3;
     default: return 0;
   }
 }
+
+// Contact tab, removed for now while being worked on
+// <Tab style={{backgroundColor}}><a style={linkStyle} href="/contact">Contact</a></Tab>
 
 export default function Tabs({ backgroundColor, textColor, children, selectedTab, appBarClass, appContentClass, dropdownClass, fontClass }: Props) {
     const linkStyle = textColor ? {color: textColor, textDecoration: 'none'} : {textDecoration: 'none'}
@@ -38,6 +43,7 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
             <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
+            
             <div style={{ float: 'right' }}>
               <LinkedInIcon/>
               <GithubIcon/>
