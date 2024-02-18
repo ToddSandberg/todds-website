@@ -22,21 +22,21 @@ export default function Home({backgroundColor, currentPercent}: Props) {
                 <div>
                     Websites
                 </div>
-                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
-                    <a href={"/scryportal"}><img src={scryportal} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="productivity website" /></a>
+                <div className='image-box' style={{ margin: 40 }}>
+                    <a href={"/scryportal"}><img src={scryportal} style={{ width: 300, height: 200 }} alt="productivity website" /></a>
                 </div>
                 <p style={{fontSize: '14px'}}>And the website you are currently on, see the source code <a href="https://github.com/ToddSandberg/todds-website">here</a></p>
                 <div>
                     Video Games
                 </div>
-                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
-                    <a href={"/weaponsmithSimulator"}><img src={weaponsmith} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="weaponsmith simulator game" /></a>
+                <div className='image-box' style={{ margin: 40 }}>
+                    <a href={"/weaponsmithSimulator"}><img src={weaponsmith} style={{ width: 300, height: 200 }} alt="weaponsmith simulator game" /></a>
                 </div>
                 <div>
                     Industry Grade Software
                 </div>
-                <div style={{ margin: 40, justifyContent: 'center', display: 'flex'}}>
-                    <a href={"/aboutme"}><img src={amazonlogo} style={{ borderRadius: '20px', width: 300, height: 200 }} alt="more about me" /></a>
+                <div className='image-box' style={{ margin: 40 }}>
+                    <a href={"/aboutme"}><img src={amazonlogo} style={{ width: 300, height: 200 }} alt="more about me" /></a>
                 </div>
             </div>
         </div>

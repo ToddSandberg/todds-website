@@ -185,3 +185,22 @@
   padding: 0;
   cursor: pointer;
 }
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.image-box img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transform: scale(1);
+}
+.image-box:hover img {
+  transform: scale(1.1);
+}
