@@ -5,7 +5,6 @@ import Markdown from 'react-markdown';
 import november from './November2023.txt';
 import december from './December2023.txt';
 import january from './January2024.txt';
-import Appbar from '../common/Appbar';
 import './Blog.css';
 
 const blogEntryList = [
@@ -47,7 +46,6 @@ export default function Blog() {
             appContentClass='BlogContent'
             dropdownClass='Blog-Dropdown'
         >
-        <Appbar/>
         <h1>Blog</h1>
         <Divider/>
         <div>
