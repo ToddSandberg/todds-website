@@ -13,11 +13,11 @@
     color: #bdb6c6;
 }
 
-.Scryportal-Appbar > a:link, a:visited {
+.Scryportal-Appbar a:link, .Scryportal-Appbar a:visited {
     color: #bdb6c6;
 }
 
-.Scryportal-Appbar > a:hover {
+.Scryportal-Appbar a:hover {
     color: #282c34;
 }
 

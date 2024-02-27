@@ -16,7 +16,7 @@
     font-family: bit;
   }
 
-  .Weaponsmith-Appbar > a:link, a:visited {
+  .Weaponsmith-Appbar a:link, .Weaponsmith-Appbar a:visited {
     color: #bdb6c6;
   }
 

@@ -39,7 +39,7 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
 
     return <Tab.Group defaultIndex={getTabIndex(selectedTab)}>
         <Tab.List>
-          <div className={appBarClass ? appBarClass : 'Appbar'} style={{backgroundColor: backgroundColor }}>
+          <div className={appBarClass ? appBarClass : 'Appbar'} style={{ backgroundColor }}>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
             <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
             <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
