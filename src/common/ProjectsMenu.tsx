@@ -10,7 +10,6 @@ type Props = {
 
 export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fontClass }: Props) {
     const thisFontClass = fontClass ? fontClass : "mainfont";
-    console.log(thisFontClass);
 
     return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
         <Menu.Button

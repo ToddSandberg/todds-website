@@ -7,6 +7,10 @@ import Weaponsmith from './projects/Weaponsmith/Weaponsmith';
 import Blog from './blog/Blog';
 import AboutMe from './aboutme/AboutMe';
 import Contact from './contact/Contact';
+import { Amplify } from 'aws-amplify';
+import config from './aws-exports.js'
+
+Amplify.configure(config);
 
 export default function Routing() {
     const router = createBrowserRouter([

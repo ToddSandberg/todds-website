@@ -2,6 +2,7 @@ import React from 'react'
 import Tabs, { TabType } from '../common/Tabs';
 import Divider from '../common/Divider';
 import './Contact.css';
+import { ContactCreateForm } from '../ui-components';
 
 export default function Contact() {
 
@@ -11,15 +12,7 @@ export default function Contact() {
         >
             <h1>Contact</h1>
             <Divider/>
-            <div>
-                <p>Name</p>
-                <input/>
-                <p>Email</p>
-                <input/>
-                <p>Message</p>
-                <textarea/><br/>
-                <button>Send</button>
-            </div>
+            <ContactCreateForm/>
         </Tabs>
     </div>;
 }
