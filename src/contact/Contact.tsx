@@ -9,6 +9,9 @@ export default function Contact() {
     return <div className="Contact">
         <Tabs
             selectedTab={TabType.CONTACT}
+            appBarClass='Contact-Appbar'
+            appContentClass='ContactContent'
+            dropdownClass='Contact-Dropdown'
         >
             <h1>Contact</h1>
             <Divider/>
