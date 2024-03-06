@@ -5,9 +5,11 @@ import Markdown from 'react-markdown';
 import november from './November2023.txt';
 import december from './December2023.txt';
 import january from './January2024.txt';
+import february from './February2024.txt';
 import './Blog.css';
 
 const blogEntryList = [
+    february,
     january,
     december,
     november
