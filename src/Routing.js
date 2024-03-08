@@ -9,6 +9,7 @@ import AboutMe from './aboutme/AboutMe';
 import Contact from './contact/Contact';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports.js'
+import Raytracer from './raytracer/Raytracer';
 
 Amplify.configure(config);
 
@@ -42,6 +43,11 @@ export default function Routing() {
         {
             path: '/blog',
             element: <Blog />,
+            errorElement: <FourOhFour />
+        },
+        {
+            path: '/raytracer',
+            element: <Raytracer />,
             errorElement: <FourOhFour />
         },
         {

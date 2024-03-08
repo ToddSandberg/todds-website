@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 
 type Props = {
     value: number,
-    onChange: (result: number) => void
+    onChange: (result: number) => void,
+    min?: number,
+    max?: number
 }
 
-export default function Slider({value, onChange}: Props) {
+export default function Slider({value, onChange, min, max}: Props) {
     const [ sliderValue, setSliderValue ] = useState(value);
 
     useEffect(() => {
@@ -16,8 +18,8 @@ export default function Slider({value, onChange}: Props) {
         <input
             type="range"
             value={sliderValue}
-            min="0"
-            max="100"
+            min={min !== undefined ? min : 0}
+            max={max !== undefined ? max : 100}
             onChange={(event) => {
                 const newSliderValue = parseInt(event.target.value);
 
