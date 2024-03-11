@@ -159,11 +159,12 @@ export default function Raytracer() {
         <header className="Raytracer">
             <Tabs
                 selectedTab={TabType.ABOUTME}
-                textColor='#7288a2'
                 appBarClass='Raytracer-Appbar'
                 appContentClass='Raytracer-App-content'
                 dropdownClass='Raytracer-Dropdown'
             >
+                <p>May run slow on some browsers.</p>
+                <p>Drag sliders to affect the red ball. Should be able to see shadows and refraction as well.</p>
                 <div>
                     x: <Slider min={-10} max={10} value={spherePosition.x} onChange={(value) => setSpherePosition(new Vector3(value, spherePosition.y, spherePosition.z))}/>
                     y: <Slider min={-10} max={10} value={spherePosition.y} onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, value, spherePosition.z))}/>

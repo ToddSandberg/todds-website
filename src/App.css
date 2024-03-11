@@ -204,3 +204,8 @@
 .image-box:hover img {
   transform: scale(1.1);
 }
+
+.example-text {
+  font-size: calc(4px + 1vmin);
+  margin: 0;
+}
