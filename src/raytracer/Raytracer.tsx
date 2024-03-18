@@ -103,7 +103,9 @@ function convertPixel(coord: number, inverse: number) {
 }
 
 function render(spheres: Sphere[], pixelSize: number) {
-    const actualWidth = 640, actualHeight = 480;
+    const isSmallDevice = document.documentElement.clientWidth < 700;
+    const actualWidth = isSmallDevice ? 320 : 640;
+    const actualHeight = isSmallDevice ? 240 : 480;
     // set up image
     const width = actualWidth/pixelSize, height = actualHeight/pixelSize;
     // set up array for pixels
@@ -163,8 +165,9 @@ export default function Raytracer() {
                 appContentClass='Raytracer-App-content'
                 dropdownClass='Raytracer-Dropdown'
             >
-                <p>May run slow on some browsers.</p>
+                <p>May run slow on some browsers. Programmed using only javascript/react.</p>
                 <p>Drag sliders to affect the red ball. Should be able to see shadows and refraction as well.</p>
+                <a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/how-does-it-work.html">Inspired by ScratchaPixel's Raytracer Primer</a>
                 <div>
                     x: <Slider min={-10} max={10} value={spherePosition.x} onChange={(value) => setSpherePosition(new Vector3(value, spherePosition.y, spherePosition.z))}/>
                     y: <Slider min={-10} max={10} value={spherePosition.y} onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, value, spherePosition.z))}/>
