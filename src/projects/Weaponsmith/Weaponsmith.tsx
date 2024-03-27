@@ -19,7 +19,7 @@ export default function Weaponsmith() {
                     </p>
             </div>
             <div className='Weaponsmith-Panel'>
-                <a href='https://monkeyyouwho.itch.io/weaponsmith-simulator'>Play now on itch.io</a>
+                <a href='https://toadtoadtoad.itch.io/weaponsmith-simulator'>Play now on itch.io</a>
             </div>
             <Divider/>
         </Tabs>

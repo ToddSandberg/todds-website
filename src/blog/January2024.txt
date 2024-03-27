@@ -1,6 +1,6 @@
 # January 2024
 
-### [Weaponsmith Simulator](https://monkeyyouwho.itch.io/weaponsmith-simulator)
+### [Weaponsmith Simulator](https://toadtoadtoad.itch.io/weaponsmith-simulator)
 - Added an icon that pops up on monster if defense is being applied
 - Made it so right clicking an item moves it to its appropriate spot
 - Added popups for items dropped from monsters

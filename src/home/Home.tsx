@@ -32,7 +32,7 @@ export default function Home({backgroundColor, currentPercent}: Props) {
                 <div>
                     Video Games
                 </div>
-                <p className='example-text'>I've developed various games for game jams (<a href="https://monkeyyouwho.itch.io/">See my itch.io</a>). See one of those projects below.</p>
+                <p className='example-text'>I've developed various games for game jams (<a href="https://toadtoadtoad.itch.io/">See my itch.io</a>). See one of those projects below.</p>
                 <div className='image-box' style={{ margin: 40 }}>
                     <a href={"/weaponsmithSimulator"}><img src={weaponsmith} style={{ width: 300, height: 200 }} alt="weaponsmith simulator game" /></a>
                 </div>

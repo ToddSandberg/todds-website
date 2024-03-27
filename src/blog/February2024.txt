@@ -30,9 +30,9 @@ Release version v0.12, see the changes included here: https://www.scryportal.com
 - Finished up shop tab which allows redeeming coins for customizable rewards
 
 ### Weaponsmith
-Released v2/v2.1 of the game, play it here: https://monkeyyouwho.itch.io/weaponsmith-simulator
-V2 blog entry: https://monkeyyouwho.itch.io/weaponsmith-simulator/devlog/689137/v2
-v2.1 blog entry: https://monkeyyouwho.itch.io/weaponsmith-simulator/devlog/689269/v21
+Released v2/v2.1 of the game, play it here: https://toadtoadtoad.itch.io/weaponsmith-simulator
+V2 blog entry: https://toadtoadtoad.itch.io/weaponsmith-simulator/devlog/689137/v2
+v2.1 blog entry: https://toadtoadtoad.itch.io/weaponsmith-simulator/devlog/689269/v21
 Below is just a few of the changes included
 - Save sound effect volume setting
 - Reset permanent inventory on game reset

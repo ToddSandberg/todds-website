@@ -1,6 +1,6 @@
 # December 2023
 
-The first half of the month was focused mostly on the BigMode Game Jam. I'm not going to mention all the work done on that project (thus why the entries are a little slim) since you can see my published game here: https://monkeyyouwho.itch.io/arid
+The first half of the month was focused mostly on the BigMode Game Jam. I'm not going to mention all the work done on that project (thus why the entries are a little slim) since you can see my published game here: https://toadtoadtoad.itch.io/arid
 
 ### This Website
 - Added markdown to this blog page to make this page easier to read
