@@ -8,6 +8,44 @@ type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryOutput: OutputType;
 };
 
+export const getBlogEntry = /* GraphQL */ `query GetBlogEntry($id: ID!) {
+  getBlogEntry(id: $id) {
+    id
+    month
+    year
+    data
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.GetBlogEntryQueryVariables,
+  APITypes.GetBlogEntryQuery
+>;
+export const listBlogEntries = /* GraphQL */ `query ListBlogEntries(
+  $filter: ModelBlogEntryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBlogEntries(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      month
+      year
+      data
+      createdAt
+      updatedAt
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListBlogEntriesQueryVariables,
+  APITypes.ListBlogEntriesQuery
+>;
 export const getContact = /* GraphQL */ `query GetContact($id: ID!) {
   getContact(id: $id) {
     id

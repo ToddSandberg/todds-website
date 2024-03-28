@@ -8,6 +8,51 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType;
 };
 
+export const onCreateBlogEntry = /* GraphQL */ `subscription OnCreateBlogEntry($filter: ModelSubscriptionBlogEntryFilterInput) {
+  onCreateBlogEntry(filter: $filter) {
+    id
+    month
+    year
+    data
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnCreateBlogEntrySubscriptionVariables,
+  APITypes.OnCreateBlogEntrySubscription
+>;
+export const onUpdateBlogEntry = /* GraphQL */ `subscription OnUpdateBlogEntry($filter: ModelSubscriptionBlogEntryFilterInput) {
+  onUpdateBlogEntry(filter: $filter) {
+    id
+    month
+    year
+    data
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnUpdateBlogEntrySubscriptionVariables,
+  APITypes.OnUpdateBlogEntrySubscription
+>;
+export const onDeleteBlogEntry = /* GraphQL */ `subscription OnDeleteBlogEntry($filter: ModelSubscriptionBlogEntryFilterInput) {
+  onDeleteBlogEntry(filter: $filter) {
+    id
+    month
+    year
+    data
+    createdAt
+    updatedAt
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnDeleteBlogEntrySubscriptionVariables,
+  APITypes.OnDeleteBlogEntrySubscription
+>;
 export const onCreateContact = /* GraphQL */ `subscription OnCreateContact($filter: ModelSubscriptionContactFilterInput) {
   onCreateContact(filter: $filter) {
     id

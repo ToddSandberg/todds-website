@@ -1,3 +1,10 @@
+type BlogEntry @model @auth(rules: [{allow: public, operations: [read]}]) {
+  id: ID!
+  month: String!
+  year: String!
+  data: String
+}
+
 type Contact @model @auth(rules: [{allow: public, operations: [create]}]) {
   id: ID!
   name: String!

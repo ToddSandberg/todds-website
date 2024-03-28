@@ -21,6 +21,19 @@ export default function Blog() {
     const resolveEntries = async () => {
         const resolveEntries: string[] = [];
 
+        // TODO eventually want to store these entries in the cloud
+        /*const client = generateClient();
+        const result = await client.graphql({
+            query: listBlogEntries,
+            variables: {}
+        });
+
+        console.log(result);
+        result.data.listBlogEntries.items.forEach((entry) => {
+            // TODO ideally wouldnt need to replace this
+            resolveEntries.push(entry.data ?  entry.data.replaceAll('\\n', '\n') : '');
+        });*/
+
         for (const indexIGuess in blogEntryList) {
             const newEntry = blogEntryList[indexIGuess];
             await fetch(newEntry)
