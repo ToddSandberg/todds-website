@@ -10,6 +10,7 @@ import Contact from './contact/Contact';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports.js'
 import Raytracer from './raytracer/Raytracer';
+import DndAi from './projects/DND AI/DndAi';
 
 Amplify.configure(config);
 
@@ -33,6 +34,11 @@ export default function Routing() {
         {
             path: '/weaponsmithSimulator',
             element: <Weaponsmith />,
+            errorElement: <FourOhFour />
+        },
+        {
+            path: '/dndai',
+            element: <DndAi />,
             errorElement: <FourOhFour />
         },
         {

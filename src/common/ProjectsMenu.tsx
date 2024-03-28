@@ -55,6 +55,18 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
                         )}
                     </Menu.Item>
                 </div>
+                <div className="DropdownItem">
+                    <Menu.Item>
+                        {({ active }) => (
+                        <a
+                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                            href="/dndai"
+                        >
+                            DND AI
+                        </a>
+                        )}
+                    </Menu.Item>
+                </div>
             </Menu.Items>
         </Transition>
     </Menu>;

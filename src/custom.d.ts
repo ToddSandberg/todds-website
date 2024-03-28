@@ -11,6 +11,7 @@ declare module "*.svg" {
 
 declare module '*.jpg';
 declare module '*.png';
+declare module '*.wav';
 
 declare module '*.txt' {
     const content: string;
