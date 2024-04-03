@@ -8,9 +8,9 @@ export default function ScryPortal() {
         <header className='Scryportal-App-header'>
             <Tabs
                 selectedTab={TabType.PROJECTS}
-                appBarClass='Scryportal-Appbar'
+                appBarClass='Scryportal-Appbar Appbar-Common'
                 appContentClass='Scryportal-App-content'
-                dropdownClass='Scryportal-Dropdown'
+                dropdownClass='Scryportal-Dropdown Dropdown-Common'
                 fontClass=" "
             >
                 <h1>ScryPortal</h1>

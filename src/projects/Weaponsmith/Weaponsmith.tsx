@@ -8,9 +8,9 @@ export default function Weaponsmith() {
     <header className="Weaponsmith">
         <Tabs
             selectedTab={TabType.PROJECTS}
-            appBarClass='Weaponsmith-Appbar'
+            appBarClass='Weaponsmith-Appbar Appbar-Common'
             appContentClass='Weaponsmith-App-content'
-            dropdownClass='Weaponsmith-Dropdown'
+            dropdownClass='Weaponsmith-Dropdown Dropdown-Common'
         >
             <div className='Weaponsmith-Panel'>
                     <h3>Weaponsmith Simulator</h3>

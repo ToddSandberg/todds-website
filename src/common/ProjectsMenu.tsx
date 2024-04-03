@@ -29,7 +29,7 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
         >
             <Menu.Items
                 style={{ backgroundColor, color }}
-                className={dropdownClass ? dropdownClass : "Dropdown"}
+                className={dropdownClass ? dropdownClass : "Dropdown Dropdown-Common"}
             >
                 <div className="DropdownItem">
                     <Menu.Item>

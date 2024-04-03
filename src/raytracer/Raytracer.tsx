@@ -161,9 +161,9 @@ export default function Raytracer() {
         <header className="Raytracer">
             <Tabs
                 selectedTab={TabType.ABOUTME}
-                appBarClass='Raytracer-Appbar'
+                appBarClass='Raytracer-Appbar Appbar-Common'
                 appContentClass='Raytracer-App-content'
-                dropdownClass='Raytracer-Dropdown'
+                dropdownClass='Raytracer-Dropdown Dropdown-Common'
             >
                 <p>May run slow on some browsers. Programmed using only javascript/react.</p>
                 <p>Drag sliders to affect the red ball. Should be able to see shadows and refraction as well.</p>

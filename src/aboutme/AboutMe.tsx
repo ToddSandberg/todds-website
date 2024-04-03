@@ -10,9 +10,9 @@ export default function AboutMe() {
             <Tabs
                 selectedTab={TabType.ABOUTME}
                 textColor='#7288a2'
-                appBarClass='About-Me-Appbar'
+                appBarClass='About-Me-Appbar Appbar-Common'
                 appContentClass='About-Me-App-content typewriter'
-                dropdownClass='About-Me-Dropdown'
+                dropdownClass='About-Me-Dropdown Dropdown-Common'
             >
                 <h3>About Me</h3>
                 {isSmallDevice()?

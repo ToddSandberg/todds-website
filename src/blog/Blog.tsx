@@ -57,9 +57,9 @@ export default function Blog() {
 
     return <div className="Blog">
         <Tabs
-            appBarClass='Blog-Appbar'
+            appBarClass='Blog-Appbar Appbar-Common'
             appContentClass='BlogContent'
-            dropdownClass='Blog-Dropdown'
+            dropdownClass='Blog-Dropdown Dropdown-Common'
         >
         <h1>Blog</h1>
         <Divider/>

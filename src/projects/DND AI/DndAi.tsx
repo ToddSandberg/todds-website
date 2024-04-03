@@ -9,9 +9,9 @@ export default function DndAi() {
         <header className='DndAi-App-header'>
             <Tabs
                 selectedTab={TabType.PROJECTS}
-                appBarClass='DndAi-Appbar'
+                appBarClass='DndAi-Appbar Appbar-Common'
                 appContentClass='DndAi-App-content'
-                dropdownClass='DndAi-Dropdown'
+                dropdownClass='DndAi-Dropdown Dropdown-Common'
                 fontClass=" "
             >
                 <h1>DND AI</h1>
