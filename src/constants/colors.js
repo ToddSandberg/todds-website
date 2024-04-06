@@ -10,10 +10,16 @@ export const background2 = {
     b: 52
 }
 
+export const peach = {
+    r: 235,
+    g: 201,
+    b: 134
+}
+
 export const blueBackground = {
-    r: 32,
-    g: 187,
-    b: 230
+    r: 135,
+    g: 206,
+    b: 235
 }
 
 export const orangeBackground = {

@@ -10,6 +10,7 @@ export default function AboutMe() {
             <Tabs
                 selectedTab={TabType.ABOUTME}
                 textColor='#7288a2'
+                backgroundColor='#0F0F0C'
                 appBarClass='About-Me-Appbar Appbar-Common'
                 appContentClass='About-Me-App-content typewriter'
                 dropdownClass='About-Me-Dropdown Dropdown-Common'

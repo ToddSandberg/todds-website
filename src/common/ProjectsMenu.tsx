@@ -11,6 +11,8 @@ type Props = {
 export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fontClass }: Props) {
     const thisFontClass = fontClass ? fontClass : "mainfont";
 
+    console.log(backgroundColor);
+
     return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
         <Menu.Button
             className={`astext ${thisFontClass}`}
@@ -28,14 +30,14 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
           leaveTo="transform opacity-0 scale-95"
         >
             <Menu.Items
-                style={{ backgroundColor, color }}
+                style={{ backgroundColor, color, zIndex: 6 }}
                 className={dropdownClass ? dropdownClass : "Dropdown Dropdown-Common"}
             >
                 <div className="DropdownItem">
                     <Menu.Item>
                         {({ active }) => (
                         <a
-                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                            style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
                             href="/scryportal"
                         >
                             Scry Portal
@@ -47,7 +49,7 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
                     <Menu.Item>
                         {({ active }) => (
                         <a
-                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                            style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
                             href="/weaponsmithSimulator"
                         >
                             Weaponsmith Simulator
@@ -59,7 +61,7 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
                     <Menu.Item>
                         {({ active }) => (
                         <a
-                            style={{ color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                            style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
                             href="/dndai"
                         >
                             DND AI

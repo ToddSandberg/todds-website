@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Tabs from './common/Tabs';
-import { background1, background2, blueBackground, orangeBackground, whitishColor } from './constants/colors';
+import { background1, background2, blueBackground, orangeBackground, peach, whitishColor } from './constants/colors';
 import Home from './home/Home';
 
 function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
@@ -54,9 +54,9 @@ function App() {
 
   const changePercentage = useCallback((value: number) => {
     setColor1({
-      r: fetchColorFromPercent(background1.r, background2.r, value),
-      g: fetchColorFromPercent(background1.g, background2.g, value),
-      b: fetchColorFromPercent(background1.b, background2.b, value)
+      r: fetchColorFromPercent3(background1.r, whitishColor.r, peach.r, value),
+      g: fetchColorFromPercent3(background1.g, whitishColor.g, peach.g, value),
+      b: fetchColorFromPercent3(background1.b, whitishColor.b, peach.b, value)
     });
     setBackground({
       r: fetchColorFromPercent3(background1.r, orangeBackground.r, blueBackground.r, value),
@@ -85,7 +85,11 @@ function App() {
           backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
           textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
         >
-          <Home backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`} currentPercent={currentPercent}/>
+          <Home
+            backgroundColor={`rgb(${color1.r}, ${color1.g}, ${color1.b})`}
+            textColor={`rgb(${textColor.r}, ${textColor.g}, ${textColor.b})`}
+            currentPercent={currentPercent}
+          />
         </Tabs>
       </header>
     </div>;

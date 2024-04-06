@@ -17,7 +17,7 @@
   .Weaponsmith-Appbar > button {
     font-size: 1em;
     color: #2B2B27;
-    font-family: bit;
+    font-family: bit !important;
   }
   
   .Weaponsmith-Appbar > button:hover {
@@ -63,6 +63,7 @@
   
 .Weaponsmith-Dropdown {
   background-color: #bdb6c6;
+  font-family: bit !important;
 }
 
 .Weaponsmith-Dropdown a:link, .Weaponsmith-Dropdown a:visited {

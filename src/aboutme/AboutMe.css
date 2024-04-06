@@ -5,21 +5,16 @@
   --color-background-dark: #0F0F0C;
 }
   
-[role = menu] {
-  font-size: 15px;
-  color: var(--color-primary);
-}
-  
 .About-Me-Appbar {
   background-color: var(--color-background-dark);
   color: var(--color-primary);
-  font-family: bit;
+  font-family: 'Montserrat', sans-serif;
 }
   
 .About-Me-Appbar > button {
   font-size: 1em;
   color: var(--color-secondary);
-  font-family: bit;
+  font-family: 'Montserrat', sans-serif;
 }
   
   .About-Me-Appbar > button:hover {
@@ -41,7 +36,7 @@
     display: flex;
     flex-direction: column;
     color: var(--color-secondary);
-    font-family: RobotoSlab;
+    font-family: 'Montserrat', sans-serif;
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -57,6 +52,7 @@
     margin-left: 50px;
     margin-right: 50px;
     text-align: left;
+    position: relative;
   }
   
   .Me-Photo {
@@ -70,6 +66,7 @@
   
 .About-Me-Dropdown {
   background-color: var(--color-background);
+  z-index: 6;
 }
 
 .typewriter p, .typewriter h3 {
