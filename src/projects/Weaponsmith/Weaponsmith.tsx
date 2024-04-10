@@ -11,6 +11,7 @@ export default function Weaponsmith() {
             appBarClass='Weaponsmith-Appbar Appbar-Common'
             appContentClass='Weaponsmith-App-content'
             dropdownClass='Weaponsmith-Dropdown Dropdown-Common'
+            fontClass='bitfont'
         >
             <div className='Weaponsmith-Panel'>
                     <h3>Weaponsmith Simulator</h3>

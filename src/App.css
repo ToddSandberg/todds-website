@@ -175,6 +175,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.bitfont {
+  font-family: bit !important;
+}
+
 .astext {
   background: none;
   border: none;

@@ -68,6 +68,7 @@
 
 .Weaponsmith-Dropdown a:link, .Weaponsmith-Dropdown a:visited {
   color: #1d2a52;
+  font-family: bit !important;
 }
 
   .Weaponsmith-Panel {
