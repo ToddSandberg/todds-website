@@ -18,7 +18,7 @@ export default function AboutMe() {
                 <h3>About Me</h3>
                 {isSmallDevice()?
                     <>
-                        <img src={me} className='Me-Photo' alt="logo" style={{zIndex: '2', position: 'relative'}}/>
+                        <img src={me} className='Me-Photo' alt="logo"/>
                         <p style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '24px'}}>
                             I'm a full stack developer who likes to make cool things.
                             Over my career I helped build various software products at Amazon, including web apps for delivery stations, back end workflows for enabling both sub same day and global package delivery, and Alexa presence detection technology. 
@@ -26,14 +26,14 @@ export default function AboutMe() {
                         </p>
                     </>
                 :<div>
-                    <img src={me} className='Me-Photo' alt="logo" style={{zIndex: '2', position: 'relative'}}/>
-                    <p style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '24px'}}>
+                    <img src={me} className='Me-Photo' alt="logo"/>
+                    <p style={{fontSize: isSmallDevice() ? '14px' : '24px'}}>
                         I'm a full stack developer who likes to make cool things.
                         Over my career I helped build various software products at Amazon, including web apps for delivery stations, back end workflows for enabling both sub same day and global package delivery, and Alexa presence detection technology. 
                         I've also worked on various passion projects, which I invite you to explore the <b><u>Projects</u></b> tab.
                     </p>
                 </div>}
-                <p style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '24px'}}>
+                <p style={{fontSize: isSmallDevice() ? '14px' : '24px'}}>
                     My passion is creating engaging user experiences. In my personal time this includes creating video games as well as web experiences.
                     Here are some techonologies I've used:
                     <ul style={{width: 50}}>
