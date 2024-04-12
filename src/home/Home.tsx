@@ -65,7 +65,7 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                 <h1>Todd Sandberg</h1>
                 <h3>Welcome to my website.</h3>
                 <p className='pulse-text'>Scroll down</p>
-                <DownArrow fill={textColor} style={{ width: 100, height: 50, bottom: 0 }} />
+                <DownArrow className={'bounce'} fill={textColor} style={{ width: 100, height: 50, bottom: 0 }} />
             </div>
         </div>
         {content}

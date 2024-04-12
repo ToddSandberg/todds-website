@@ -212,6 +212,18 @@
   font-weight: bold;
 }
 
+.bounce {
+  animation-name: bounce; /* Name the animation */
+  animation-duration: 2s; /* Duration of the animation */
+  animation-iteration-count: infinite; /* Repeat forever */
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 .pulse-text {
   opacity: .25;
   animation: pulse 2s linear alternate infinite;
