@@ -21,6 +21,15 @@ export default function ScryPortal() {
                         This react application is intended to ease that burden by tracking your goals and automatically scheduling your day.
                     </p>
                     <a href="https://www.scryportal.com/">Sign up and use</a>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/zSJ_MOVPbbk?si=J3ltIgyNzM7slEet"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
                 </div>
             </Tabs>
         </header>
