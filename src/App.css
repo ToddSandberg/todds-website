@@ -10,6 +10,13 @@
   src: url(./RobotoSlab.ttf) format('opentype');
 }
 
+:root {
+  --color-primary: white;
+  --color-secondary: #7288a2;
+  --color-background: #282c34;
+  --color-background-dark: #0F0F0C;
+}
+
 .App {
   text-align: center;
 }
@@ -35,11 +42,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-background);
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
+
 
 .App-link {
   color: #61dafb;
@@ -47,7 +54,7 @@
 
 [role = menu] {
   font-size: 15px;
-  color: #282c34;
+  color: var(--color-background);
 }
 
 .Appbar-Common {
@@ -78,15 +85,11 @@
 }
 
 .Appbar > button:hover {
-  background-color: #282c34;
+  background-color: var(--color-background-dark) !important;
 }
 
 .Appbar > [aria-selected="true"] {
-  background: #282c34;
-}
-
-.Appbar > [aria-selected="false"] {
-  color: black !important;
+  border-bottom: solid var(--color-background-dark);
 }
 
 .App-content {

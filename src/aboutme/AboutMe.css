@@ -18,13 +18,12 @@
 }
   
   .About-Me-Appbar > button:hover {
-    background-color: var(--color-background);
+    background-color: var(--color-background) !important;
     color: var(--color-secondary);
   }
   
   .About-Me-Appbar > [aria-selected="true"] {
-    background: var(--color-background);
-    color: var(--color-primary);
+    border-bottom: solid var(--color-secondary);
   }
   
   .About-Me-Appbar > [aria-selected="false"] {
