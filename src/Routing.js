@@ -8,7 +8,7 @@ import Blog from './blog/Blog';
 import AboutMe from './aboutme/AboutMe';
 import Contact from './contact/Contact';
 import { Amplify } from 'aws-amplify';
-import config from './aws-exports.js'
+import config from './amplifyconfiguration.json';
 import Raytracer from './raytracer/Raytracer';
 import DndAi from './projects/DND AI/DndAi';
 

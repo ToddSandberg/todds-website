@@ -1,6 +1,6 @@
 import React from 'react'
 import DndAiPic from './CurrentUI.png';
-import TextToSpeechAudio from './tts.wav';
+import TextToSpeechAudio from 'url:./tts.wav';
 import Tabs, { TabType } from '../../common/Tabs';
 import './DndAi.css';
 

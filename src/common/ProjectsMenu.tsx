@@ -11,7 +11,7 @@ type Props = {
 export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fontClass }: Props) {
     const thisFontClass = fontClass ? fontClass : "mainfont";
 
-    return <Menu as="div" style={{ position: "relative", display: "inline-block", textAlign: "left" }}>
+    return <Menu as="div" style={{ position: "relative", display: "inline", textAlign: "left" }}>
         <Menu.Button
             className={`astext ${thisFontClass}`}
             style={{color, fontSize: "1em", textAlign: 'center', width: 150}}
@@ -28,7 +28,7 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
           leaveTo="transform opacity-0 scale-95"
         >
             <Menu.Items
-                style={{ backgroundColor, color, zIndex: 6 }}
+                style={{ backgroundColor, color, zIndex: 6, minWidth: 200 }}
                 className={dropdownClass ? dropdownClass : "Dropdown Dropdown-Common"}
             >
                 <div className="DropdownItem">
