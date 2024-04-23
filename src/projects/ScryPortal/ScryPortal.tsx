@@ -1,7 +1,7 @@
-import React from 'react'
 import scryportal from './scryportal.png';
 import Tabs, { TabType } from '../../common/Tabs';
 import './ScryPortal.css';
+import { isSmallDevice } from '../../common/CommonFunctions';
 
 export default function ScryPortal() {
     return <div className='Scryportal'>
@@ -14,7 +14,7 @@ export default function ScryPortal() {
                 fontClass=" "
             >
                 <h1>ScryPortal</h1>
-                <div className='Scryportal-Panel'>
+                <div className='Scryportal-Panel' style={{maxWidth: '90em'}}>
                     <img src={scryportal} className='Me-Photo' alt="logo" />
                     <p>
                         I've always had a passion for optimizing productivity and removing the time it takes to plan various aspects of life.
@@ -22,8 +22,8 @@ export default function ScryPortal() {
                     </p>
                     <a href="https://www.scryportal.com/">Sign up and use</a>
                     <iframe
-                        width="560"
-                        height="315"
+                        width={isSmallDevice() ? "373" : "560"}
+                        height={isSmallDevice() ? "210" : "315"}
                         src="https://www.youtube.com/embed/zSJ_MOVPbbk?si=J3ltIgyNzM7slEet"
                         title="YouTube video player"
                         frameBorder="0"
