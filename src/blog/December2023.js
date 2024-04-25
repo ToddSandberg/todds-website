@@ -1,4 +1,4 @@
-# December 2023
+export const december = `# December 2023
 
 The first half of the month was focused mostly on the BigMode Game Jam. I'm not going to mention all the work done on that project (thus why the entries are a little slim) since you can see my published game here: https://toadtoadtoad.itch.io/arid
 
@@ -30,4 +30,4 @@ The first half of the month was focused mostly on the BigMode Game Jam. I'm not 
 - Working on adding a toolbar so the player can select different tools
 
 ### Procedural Generation
-- Working to make the map have multiple chunks and the mountains have ranges
+- Working to make the map have multiple chunks and the mountains have ranges`;

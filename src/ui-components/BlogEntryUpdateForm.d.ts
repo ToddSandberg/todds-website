@@ -4,9 +4,9 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-import * as React from "react";
-import { GridProps, TextFieldProps } from "@aws-amplify/ui-react";
-import { BlogEntry } from "../API.ts";
+import * as React from 'react';
+import { GridProps, TextFieldProps } from '@aws-amplify/ui-react';
+import { BlogEntry } from '../API.ts';
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
 } | null;

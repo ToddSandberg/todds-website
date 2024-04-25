@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function fetchSunTop(percent: number, startingTop: number, endingTop: number) {
     return ((endingTop - startingTop)*(percent/100))+startingTop;
@@ -29,5 +29,5 @@ export default function SunAndMoon({currentPercent}: Props) {
             right: `${fetchSunLeft(currentPercent)}%`,
             zIndex: '0'
         }}></div>
-    </div>
+    </div>;
 }

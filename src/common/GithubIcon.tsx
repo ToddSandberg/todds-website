@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import github from './github.png';
 
 export default function GithubIcon() {

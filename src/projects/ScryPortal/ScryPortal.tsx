@@ -17,13 +17,13 @@ export default function ScryPortal() {
                 <div className='Scryportal-Panel' style={{maxWidth: '90em'}}>
                     <img src={scryportal} className='Me-Photo' alt="logo" />
                     <p>
-                        I've always had a passion for optimizing productivity and removing the time it takes to plan various aspects of life.
+                        {'I\'ve'} always had a passion for optimizing productivity and removing the time it takes to plan various aspects of life.
                         This react application is intended to ease that burden by tracking your goals and automatically scheduling your day.
                     </p>
                     <a href="https://www.scryportal.com/">Sign up and use</a>
                     <iframe
-                        width={isSmallDevice() ? "373" : "560"}
-                        height={isSmallDevice() ? "210" : "315"}
+                        width={isSmallDevice() ? '373' : '560'}
+                        height={isSmallDevice() ? '210' : '315'}
                         src="https://www.youtube.com/embed/zSJ_MOVPbbk?si=J3ltIgyNzM7slEet"
                         title="YouTube video player"
                         frameBorder="0"

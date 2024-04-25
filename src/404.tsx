@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function FourOhFour() {
     const navigate = useNavigate();
@@ -9,7 +9,7 @@ export default function FourOhFour() {
             <div style={{height: '100%', alignItems: 'center', justifyContent: 'center', display: 'inline'}}>
                 <h1 style={{fontSize: '100px'}}>404</h1><br/>
                 <p>You tried to access a page that doesnt exist {':('}</p><br/>
-                <button style={{ backgroundColor: 'white', color: 'black', borderRadius: '10px', padding: '10px'}} onClick={() => navigate("/")}>Back to home</button>
+                <button style={{ backgroundColor: 'white', color: 'black', borderRadius: '10px', padding: '10px'}} onClick={() => navigate('/')}>Back to home</button>
             </div>
         </header>
     </div>;

@@ -1,4 +1,4 @@
-# January 2024
+export const january = `# January 2024
 
 ### [Weaponsmith Simulator](https://toadtoadtoad.itch.io/weaponsmith-simulator)
 - Added an icon that pops up on monster if defense is being applied
@@ -47,4 +47,4 @@ Story driven boss fight platformer
 
 ### Skyrim Modding
 While this is not a product im creating in itself, I want to mention the time I've spent learning skyrim modding which includes programming in C++ using SKSE.
-I plan to release a mod in the next month which adds icons to quest item in the HUD.
+I plan to release a mod in the next month which adds icons to quest item in the HUD.`;

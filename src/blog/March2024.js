@@ -1,4 +1,4 @@
-# March 2024
+export const march = `# March 2024
 
 ### ScryPortal
 - Dependency updates
@@ -47,4 +47,4 @@ Creating a game where you can have a custom dekstop pal ala clippy who comments 
 
 ### Modding
 - Created a stardew mod that adds dynamic shadows
-- Still working on Skyrim mod to icon for items required by quests
+- Still working on Skyrim mod to icon for items required by quests`;

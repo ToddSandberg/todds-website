@@ -1,4 +1,4 @@
-# November 2023
+export const november = `# November 2023
 
 Below is an overview of the different changes I've been making in various projects.
 I also started working on the Big Mode game jam where most of my time was spent later in the month.
@@ -49,4 +49,4 @@ This is a project to track achievements in various platforms (despite the name).
 ### DND Website
 I created this website a while ago to flesh out a dnd campaign related to cooking. It's grown into a larger project for displaying files.
 - Added generic json rendering, so user can add use a json file for note taking
-- Working on adding appbar
+- Working on adding appbar`;

@@ -1,4 +1,4 @@
-import { Vector3 } from "./Vector3";
+import { Vector3 } from './Vector3';
 
 type IntersectResult = {
     didIntersect: boolean,
@@ -37,7 +37,7 @@ export class Sphere {
         const tca = l.dot(raydir);
         // If dot product is negative that means its behind the origin
         if (tca < 0) {
-            console.log("sphere behind origin");
+            console.log('sphere behind origin');
             return {didIntersect: false };
         }
         // Squared distance from the sphere center to the closest point on ray
@@ -45,7 +45,7 @@ export class Sphere {
         // If the distance squared is greater than the radius squared, it didnt hit
         const radiusSquared = this.radius * this.radius;
         if (d2 > radiusSquared) {
-            console.log("distance is greate than radius");
+            console.log('distance is greate than radius');
             console.log(radiusSquared);
             console.log(d2);
             return { didIntersect: false };

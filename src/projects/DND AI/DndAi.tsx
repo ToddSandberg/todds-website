@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import DndAiPic from './CurrentUI.png';
 import TextToSpeechAudio from 'url:./tts.wav';
 import Tabs, { TabType } from '../../common/Tabs';
@@ -28,7 +28,7 @@ export default function DndAi() {
                     <a href="https://github.com/ToddSandberg/DND-AI">Source Code and more info</a>
                 </div>
                 
-                <img className={"Dnd-pic"} src={DndAiPic} alt="logo" />
+                <img className={'Dnd-pic'} src={DndAiPic} alt="logo" />
             </Tabs>
         </header>
     </div>;

@@ -1,4 +1,4 @@
-# February 2024
+export const february = `# February 2024
 
 ### This Website
 - Fixed some spacing and added link to source code on home
@@ -47,4 +47,4 @@ Below is just a few of the changes included
 ### Skyrim Modding
 Working on a mod to add an icon to items that the player has a active quest to obtain
 - Added icon to inventory as well
-- Made a specific icon to moreHUD to show
+- Made a specific icon to moreHUD to show`;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function LinkedInIcon() {
     return <a href="https://www.linkedin.com/in/todd-sandberg/" style={{display: 'inline', zIndex: '3'}} target="_blank" rel="noreferrer">

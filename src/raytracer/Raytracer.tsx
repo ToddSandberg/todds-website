@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Tabs, { TabType } from '../common/Tabs';
 import './Raytracer.css';
 import ImageRenderer from './ImageRenderer';
@@ -14,11 +14,11 @@ function mix(a: number, b: number, mix: number) {
 }
 
 function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], depth: number) {
-    var tnear = Number.MAX_SAFE_INTEGER;
-    var closestSphere;
+    let tnear = Number.MAX_SAFE_INTEGER;
+    let closestSphere;
 
     // Find the closest intersecting sphere
-    for (var i = 0; i < spheres.length; ++i) {
+    for (let i = 0; i < spheres.length; ++i) {
         const intersetResult = spheres[i].intersect(rayOrigin, rayDirection);
         // Does the ray intersect with the sphere
         if (intersetResult.didIntersect && intersetResult.intersectPoint1 && intersetResult.intersectPoint2) {
@@ -33,18 +33,18 @@ function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], dep
     // if there's no intersection return black or background color
     if (!closestSphere) return new Vector3(2, 2, 2);
 
-    var surfaceColor = new Vector3(0, 0, 0);
+    let surfaceColor = new Vector3(0, 0, 0);
     // The origin of the ray plus the vector to nearest
     const pointOfIntersection = rayOrigin.plus(rayDirection.times(tnear));
     // normal at the intersection point, by going from center of sphere to intersection point
-    var intersectionNormal = pointOfIntersection.minus(closestSphere.position);
+    const intersectionNormal = pointOfIntersection.minus(closestSphere.position);
     intersectionNormal.normalize(); // normalize normal direction
 
     // If the normal and the view direction are not opposite to each other
     // reverse the normal direction. That also means we are inside the sphere so set
     // the inside bool to true. Finally reverse the sign of IdotN which we want
     // positive.
-    var insideOfSphere = false;
+    let insideOfSphere = false;
     if (rayDirection.dot(intersectionNormal) > 0){
         intersectionNormal.reverse();
         insideOfSphere = true;
@@ -62,7 +62,7 @@ function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], dep
         const refldir = rayDirection.minus(intersectionNormal.times(2).times(rayDirection.dot(intersectionNormal)));
         refldir.normalize();
         const reflection = trace(pointOfIntersection.plus(intersectionNormal.times(bias)), refldir, spheres, depth + 1);
-        var refraction = new Vector3(0, 0, 0);
+        let refraction = new Vector3(0, 0, 0);
         // if the sphere is also transparent compute refraction ray (transmission)
         if (closestSphere.transparency) {
             const ior = 1.1, eta = insideOfSphere ? ior : 1 / ior; // are we inside or outside the surface?
@@ -81,7 +81,7 @@ function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], dep
     }
     else {
         // it's a diffuse object, no need to raytrace any further
-        for (var i = 0; i < spheres.length; ++i) {
+        for (let i = 0; i < spheres.length; ++i) {
             if (spheres[i].emissionColor && spheres[i].emissionColor!.x > 0) {
                 // TODO handle emission
             }
@@ -117,11 +117,11 @@ function render(spheres: Sphere[], pixelSize: number) {
     const fov = 30;
     const aspectratio = width / height;
     // FOV angle in radians
-    const angle = Math.tan(M_PI * 0.5 * fov / 180.);
+    const angle = Math.tan(M_PI * 0.5 * fov / 180.0);
 
     // Trace rays for each pixel on the screen
-    for (var x = 0; x < width; ++x) {
-        for (var y = 0; y < height; ++y) {
+    for (let x = 0; x < width; ++x) {
+        for (let y = 0; y < height; ++y) {
             // Find ray direction
             // Normalize x/y to [-1, 1]
             // Pixel is converted to 0,1 range, then the 2 * x - 1 converts it from -1. 1 to normalize
