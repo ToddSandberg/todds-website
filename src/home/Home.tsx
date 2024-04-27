@@ -1,4 +1,3 @@
-import React from 'react';
 import Hills from '../svgs/hills.svg';
 import SunAndMoon from './SunAndMoon';
 import scryportal from '../projects/ScryPortal/scryportal.png';
@@ -16,13 +15,13 @@ type Props = {
 export default function Home({backgroundColor, textColor, currentPercent}: Props) {
 
     const content = <>
-        <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
-            <div style={{height: '100vh', width: '100vw',marginLeft: 50, marginRight: 50, alignContent: 'center', zIndex: 3}}>
+        <section className="HomeContainer">
+            <div className="HomeContainerContent">
                 <h3 style={{padding: 20}}>{'I\'m passionate about developing...'}</h3>
             </div>
-        </div>
-        <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
-            <div style={{height: '100vh', width: '100vw',marginLeft: 50, marginRight: 50, alignContent: 'center', zIndex: 3}}>
+        </section>
+        <section className="HomeContainer">
+            <div className="HomeContainerContent">
                 <h2>Websites</h2>
                 <p className='example-text'>{'I\'ve built various websites as personal projects and to support amazon deliveries.'}</p>
                 <p className='example-text'>As an example, below is a TODO list/scheduler react app I wrote.</p>
@@ -31,9 +30,9 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                 </div>
                 <p className='example-text'>And the website you are currently on, see the source code <a href="https://github.com/ToddSandberg/todds-website">here</a></p>
             </div>
-        </div>
-        <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
-            <div style={{height: '100vh', width: '100vw',marginLeft: 50, marginRight: 50, alignContent: 'center', zIndex: 3}}>
+        </section>
+        <section className="HomeContainer">
+            <div className="HomeContainerContent">
                 <h2>Video Games</h2>
                 <p className='example-text'>{'I\'ve developed various games for game jams'} (<a href="https://toadtoadtoad.itch.io/">See my itch.io</a>). See one of those projects below.</p>
                 <div className='image-box' style={{ margin: 40 }}>
@@ -44,16 +43,16 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                     <a href={'/raytracer'}><img src={raytracer} style={{ width: 300, height: 200 }} alt="browser raytracer" /></a>
                 </div>
             </div>
-        </div>
-        <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
-            <div style={{height: '100vh', width: '100vw', marginLeft: 50, marginRight: 50, alignContent: 'center', zIndex: 3}}>
+        </section>
+        <section className="HomeContainer">
+            <div className="HomeContainerContent">
                 <h2>Industry Grade Software</h2>
                 <p className='example-text'>At Amazon I helped develop systems that supported customers on a global scale. Read more on the aboutme page.</p>
                 <div className='image-box' style={{ margin: 40 }}>
                     <a href={'/aboutme'}><img src={amazonlogo} style={{ width: 300, height: 200 }} alt="more about me" /></a>
                 </div>
             </div>
-        </div>
+        </section>
     </>;
 
     return <div style={{width: '100%'}}>
