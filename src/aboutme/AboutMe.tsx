@@ -3,6 +3,15 @@ import me from './me.jpg';
 import { isSmallDevice } from '../common/CommonFunctions';
 import Tabs, { TabType } from '../common/Tabs';
 import './AboutMe.css';
+import Typewriter from './Typewriter';
+
+const firstParagraph = 'I\'m a full stack developer who likes to make cool things.' +
+' Over my career I helped build various software products at Amazon, including web apps for delivery stations, back end workflows for enabling both sub same day and global package delivery, and Alexa presence detection technology.' + 
+' I\'ve also worked on various passion projects, which I invite you to explore the Projects tab.';
+const secondParagraph = 'My passion is creating engaging user experiences. In my personal time this includes creating video games as well as web experiences.'+
+' Some technologies I\'ve used are React, PHP, Node.js, Unity, and Godot/'+
+' I\'ve also used AWS cloud services extensively to create enterprise workflows, API microservices, and host web applications.' +
+' My primary back end languages I use are Java, C#, and Typescript.';
 
 export default function AboutMe() {
     return <div className="App">
@@ -20,36 +29,19 @@ export default function AboutMe() {
                 {isSmallDevice()?
                     <>
                         <img src={me} className='Me-Photo' alt="logo"/>
-                        <p style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '24px'}}>
-                            {'I\'m a full stack developer who likes to make cool things.' +
-                            'Over my career I helped build various software products at Amazon, including web apps for delivery stations, back end workflows for enabling both sub same day and global package delivery, and Alexa presence detection technology.' + 
-                            'I\'ve also worked on various passion projects, which I invite you to explore the <b><u>Projects</u></b> tab.'}
-                            <span className='typewriter-caret'></span>
-                        </p>
+                        <div style={{width: '80vw'}}>
+                            <Typewriter text={firstParagraph}/>
+                        </div>
                     </>
-                    :<div>
+                    :<div style={{width: '90vw'}}>
                         <img src={me} className='Me-Photo' alt="logo"/>
-                        <p style={{fontSize: isSmallDevice() ? '14px' : '20px'}}>
-                            {'I\'m a full stack developer who likes to make cool things.'+
-                            'Over my career I helped build various software products at Amazon, including web apps for delivery stations, back end workflows for enabling both sub same day and global package delivery, and Alexa presence detection technology.'+
-                            'I\'ve also worked on various passion projects, which I invite you to explore the '}<b><u>Projects</u></b>{' tab.'}
-                            <span className='typewriter-caret'></span>
-                        </p>
+                        <div style={{width: '80vw', textAlign: 'left'}}>
+                            <Typewriter text={firstParagraph}/>
+                        </div>
                     </div>}
-                <p style={{fontSize: isSmallDevice() ? '14px' : '20px'}}>
-                    {'My passion is creating engaging user experiences. In my personal time this includes creating video games as well as web experiences.'+
-                    'Here are some techonologies I\'ve used:'}
-                    <ul style={{width: 50}}>
-                        <li>React</li>
-                        <li>PHP</li>
-                        <li>node.js</li>
-                        <li>Unity</li>
-                        <li>Godot</li>
-                    </ul>
-                    {'I\'ve also used AWS cloud services extensively to create enterprise workflows, API microservices, and host web applications.' +
-                    'My primary back end languages I use are Java, C#, and Typescript.'}
-                    <span className='typewriter-caret'></span>
-                </p>
+                <div style={{textAlign: 'left'}}>
+                    <Typewriter text={secondParagraph}/>
+                </div>
             </Tabs>
         </header>
     </div>;
