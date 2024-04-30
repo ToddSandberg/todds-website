@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { isSmallDevice } from '../common/CommonFunctions';
+import StyledText from '../common/StyledText';
 
 type Props = {
     text: string,
@@ -24,7 +25,7 @@ export default function Typewriter({text, speed = 5}: Props) {
     return <p
         style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '20px'}}
     >
-        {currentText}
+        <StyledText text={currentText}/>
         <span className='typewriter-caret'></span>
     </p>;
 }
