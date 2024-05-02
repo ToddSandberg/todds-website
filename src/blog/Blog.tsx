@@ -7,8 +7,10 @@ import { march } from './March2024';
 import { february } from './February2024';
 import { january } from './January2024';
 import { november } from './November2023';
+import { april2024 } from './April2024';
 
 const blogEntryList = [
+    april2024,
     march,
     february,
     january,
