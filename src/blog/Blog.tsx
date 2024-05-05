@@ -63,6 +63,7 @@ export default function Blog() {
             appBarClass='Blog-Appbar Appbar-Common'
             appContentClass='BlogContent'
             dropdownClass='Blog-Dropdown Dropdown-Common'
+            fontClass='blog-font'
         >
             <h1>Blog</h1>
             <Divider/>

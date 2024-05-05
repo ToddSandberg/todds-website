@@ -26,6 +26,12 @@
   font-family: bit;
 }
 
+.Blog-Appbar > button {
+  font-family: bit;
+  font-size: 1em;
+  color: var(--color-secondary);
+}
+
 .Blog-Appbar a:link, .Blog-Appbar a:visited {
   color: var(--blog-color-secondary);
 }
@@ -57,4 +63,8 @@
 .Blog-Dropdown {
   background-color: var(--blog-color-background-secondary);
   color: var(--blog-color-secondary);
+}
+
+.blog-font {
+  font-family: bit;
 }
