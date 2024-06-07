@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Tabs from './common/Tabs';
-import { background1, blueBackground, orangeBackground, peach, whitishColor } from './constants/colors';
+import { background1, blueBackground, darkBlue, orangeBackground, peach, whitishColor } from './constants/colors';
 import Home from './home/Home';
 
-function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
+/*function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
     return ((colorValue2 - colorValue1)*(sliderValue/100))+colorValue1;
-}
+}*/
 
 function fetchColorFromPercent3(colorValue1: number, colorValue2: number, colorValue3: number, sliderValue: number): number {
     if (sliderValue < 50) {
@@ -64,9 +64,9 @@ function App() {
             b: fetchColorFromPercent3(background1.b, orangeBackground.b, blueBackground.b, value)
         });
         setTextColor({
-            r: fetchColorFromPercent(whitishColor.r, background1.r, value),
-            g: fetchColorFromPercent(whitishColor.g, background1.g, value),
-            b: fetchColorFromPercent(whitishColor.b, background1.b, value)
+            r: fetchColorFromPercent3(whitishColor.r, darkBlue.r, background1.r, value),
+            g: fetchColorFromPercent3(whitishColor.g, darkBlue.g, background1.g, value),
+            b: fetchColorFromPercent3(whitishColor.b, darkBlue.b, background1.b, value)
         });
         setCurrentPercent(value);
     }, [setColor1, setBackground, setTextColor, setCurrentPercent]);

@@ -22,6 +22,12 @@ export const blueBackground = {
     b: 235
 };
 
+export const darkBlue = {
+    r: 3,
+    g: 32,
+    b: 255
+};
+
 export const orangeBackground = {
     r: 240,
     g: 168,
