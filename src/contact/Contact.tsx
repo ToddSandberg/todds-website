@@ -1,4 +1,3 @@
-import React from 'react';
 import Tabs, { TabType } from '../common/Tabs';
 import Divider from '../common/Divider';
 import './Contact.css';

@@ -11,9 +11,9 @@ import Home from './home/Home';
 function fetchColorFromPercent3(colorValue1: number, colorValue2: number, colorValue3: number, sliderValue: number): number {
     if (sliderValue < 50) {
         return ((colorValue2 - colorValue1)*(sliderValue/50))+colorValue1;
-    } else {
-        return ((colorValue3 - colorValue2)*((sliderValue-50)/50))+colorValue2;
     }
+
+    return ((colorValue3 - colorValue2)*((sliderValue-50)/50))+colorValue2;
 }
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [ ]);
+    }, []);
 
     const changePercentage = useCallback((value: number) => {
         setColor1({
@@ -69,7 +69,7 @@ function App() {
             b: fetchColorFromPercent3(whitishColor.b, darkBlue.b, background1.b, value)
         });
         setCurrentPercent(value);
-    }, [setColor1, setBackground, setTextColor, setCurrentPercent]);
+    }, []);
 
     // Random starting location
     /*useEffect(() => {

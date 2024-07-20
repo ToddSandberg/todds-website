@@ -1,4 +1,3 @@
-import React from 'react';
 import Divider from '../../common/Divider';
 import Tabs, { TabType } from '../../common/Tabs';
 import './Weaponsmith.css';

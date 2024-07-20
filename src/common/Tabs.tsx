@@ -44,7 +44,7 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
                 <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
-            
+
                 <div style={{ float: 'right' }}>
                     <LinkedInIcon/>
                     <GithubIcon/>

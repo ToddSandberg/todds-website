@@ -23,11 +23,11 @@ export default function SunAndMoon({currentPercent}: Props) {
             top: fetchSunTop(currentPercent, window.innerHeight - (window.innerHeight * 0.15), window.innerHeight * 0.15),
             left: `${fetchSunLeft(currentPercent)}%`,
             zIndex: '0'
-        }}></div>
+        }} />
         <div className="Moon" style={{
             top: fetchSunTop(currentPercent, window.innerHeight * 0.15, window.innerHeight - (window.innerHeight * 0.15)),
             right: `${fetchSunLeft(currentPercent)}%`,
             zIndex: '0'
-        }}></div>
+        }} />
     </div>;
 }

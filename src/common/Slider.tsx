@@ -21,7 +21,7 @@ export default function Slider({value, onChange, min, max}: Props) {
             min={min !== undefined ? min : 0}
             max={max !== undefined ? max : 100}
             onChange={(event) => {
-                const newSliderValue = parseInt(event.target.value);
+                const newSliderValue = Number.parseInt(event.target.value);
 
                 setSliderValue(newSliderValue);
                 onChange(newSliderValue);

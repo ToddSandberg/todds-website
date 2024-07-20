@@ -17,7 +17,7 @@ export default function Typewriter({text, speed = 5}: Props) {
                 setCurrentText(prevText => prevText + text[currentIndex]);
                 setCurrentIndex(prevIndex => prevIndex + 1);
             }, speed);
-        
+
             return () => clearTimeout(timeout);
         }
     }, [text, speed, currentIndex]);
@@ -26,6 +26,6 @@ export default function Typewriter({text, speed = 5}: Props) {
         style={{zIndex: '2', position: 'relative', fontSize: isSmallDevice() ? '14px' : '20px'}}
     >
         <StyledText text={currentText}/>
-        <span className='typewriter-caret'></span>
+        <span className='typewriter-caret'/>
     </p>;
 }
