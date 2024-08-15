@@ -1,10 +1,10 @@
-import Hills from '../svgs/hills.svg';
+import Hills from '../svgs/hills.svg?react';
 import SunAndMoon from './SunAndMoon';
 import scryportal from '../projects/ScryPortal/scryportal.png';
 import weaponsmith from '../projects/Weaponsmith/WeaponsmithBackground.png';
 import raytracer from './raytracer.png';
 import amazonlogo from '../aboutme/amazonlogo.jpg';
-import DownArrow from './down-arrow.svg';
+import DownArrow from './down-arrow.svg?react';
 
 type Props = {
     backgroundColor?: string,

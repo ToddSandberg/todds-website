@@ -1,5 +1,5 @@
-import { Menu, Transition } from '@headlessui/react';
-import React, { Fragment } from 'react';
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react';
+import { Fragment } from 'react';
 
 type Props = {
     backgroundColor?: string,
@@ -12,12 +12,12 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
     const thisFontClass = fontClass ? fontClass : 'mainfont';
 
     return <Menu as="div" style={{ position: 'relative', display: 'inline', textAlign: 'left' }}>
-        <Menu.Button
+        <MenuButton
             className={`astext ${thisFontClass}`}
             style={{color, fontSize: '1em', textAlign: 'center', width: 150}}
         >
             Projects
-        </Menu.Button>
+        </MenuButton>
         <Transition
             as={Fragment}
             enter="transition ease-out duration-100"
@@ -27,47 +27,47 @@ export default function ProjectsMenu({ backgroundColor, color, dropdownClass, fo
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
         >
-            <Menu.Items
+            <MenuItems
                 style={{ backgroundColor, color, zIndex: 6, minWidth: 200 }}
                 className={dropdownClass ? dropdownClass : 'Dropdown Dropdown-Common'}
             >
                 <div className="DropdownItem">
-                    <Menu.Item>
-                        {({ active }) => (
+                    <MenuItem>
+                        {({ focus  }) => (
                             <a
-                                style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                                style={{ position: 'relative', color: focus ? backgroundColor : color, backgroundColor: focus ? color : backgroundColor}}
                                 href="/scryportal"
                             >
                             Scry Portal
                             </a>
                         )}
-                    </Menu.Item>
+                    </MenuItem>
                 </div>
                 <div className="DropdownItem">
-                    <Menu.Item>
-                        {({ active }) => (
+                    <MenuItem>
+                        {({ focus  }) => (
                             <a
-                                style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                                style={{ position: 'relative', color: focus ? backgroundColor : color, backgroundColor: focus ? color : backgroundColor}}
                                 href="/weaponsmithSimulator"
                             >
                             Weaponsmith Simulator
                             </a>
                         )}
-                    </Menu.Item>
+                    </MenuItem>
                 </div>
                 <div className="DropdownItem">
-                    <Menu.Item>
-                        {({ active }) => (
+                    <MenuItem>
+                        {({ focus  }) => (
                             <a
-                                style={{ position: 'relative', color: active ? backgroundColor : color, backgroundColor: active ? color : backgroundColor}}
+                                style={{ position: 'relative', color: focus ? backgroundColor : color, backgroundColor: focus ? color : backgroundColor}}
                                 href="/dndai"
                             >
                             DND AI
                             </a>
                         )}
-                    </Menu.Item>
+                    </MenuItem>
                 </div>
-            </Menu.Items>
+            </MenuItems>
         </Transition>
     </Menu>;
 }

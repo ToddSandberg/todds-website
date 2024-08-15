@@ -1,5 +1,4 @@
-import { Tab } from '@headlessui/react';
-import React from 'react';
+import { Tab, TabGroup, TabList, TabPanels } from '@headlessui/react';
 import ProjectsMenu from './ProjectsMenu';
 import LinkedInIcon from './LinkedInIcon';
 import GithubIcon from './GithubIcon';
@@ -38,8 +37,8 @@ function getTabIndex(selectedTab?: TabType) {
 export default function Tabs({ backgroundColor, textColor, children, selectedTab, appBarClass, appContentClass, dropdownClass, fontClass }: Props) {
     const linkStyle = textColor ? {color: textColor, textDecoration: 'none'} : {textDecoration: 'none'};
 
-    return <Tab.Group defaultIndex={getTabIndex(selectedTab)}>
-        <Tab.List>
+    return <TabGroup defaultIndex={getTabIndex(selectedTab)}>
+        <TabList>
             <div className={appBarClass ? appBarClass : 'Appbar Appbar-Common'} style={{ backgroundColor }}>
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
@@ -50,12 +49,12 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
                     <GithubIcon/>
                 </div>
             </div>\
-        </Tab.List>
-        <Tab.Panels>
+        </TabList>
+        <TabPanels>
             <Appbar/>
             <div className={appContentClass ? appContentClass : 'App-content'} style={{color: textColor}}>
                 {children}
             </div>
-        </Tab.Panels>
-    </Tab.Group>;
+        </TabPanels>
+    </TabGroup>;
 }

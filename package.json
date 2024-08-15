@@ -2,14 +2,13 @@
   "name": "todds-website",
   "version": "0.1.0",
   "private": true,
-  "source": "src/index.html",
   "dependencies": {
-    "@aws-amplify/ui-react": "^6.1.7",
-    "@headlessui/react": "^1.7.19",
+    "@aws-amplify/ui-react": "^6.2.0",
+    "@headlessui/react": "^2.1.2",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
-    "aws-amplify": "^6.0.28",
+    "aws-amplify": "^6.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
@@ -17,8 +16,8 @@
     "typescript": "^5.5.2"
   },
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "vite",
+    "build": "vite build"
   },
   "browserslist": {
     "production": [
@@ -37,16 +36,14 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@parcel/packager-raw-url": "^2.12.0",
-    "@parcel/transformer-inline-string": "^2.12.0",
-    "@parcel/transformer-svg-react": "^2.12.0",
-    "@parcel/transformer-webmanifest": "^2.12.0",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "buffer": "^6.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
-    "parcel": "^2.12.0",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "vite": "^5.4.0",
+    "vite-plugin-svgr": "^4.2.0"
   }
 }
