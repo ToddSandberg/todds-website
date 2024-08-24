@@ -2,6 +2,7 @@ build/
 node_modules
 
 .parcel-cache/
+coverage
 
 # not to share if public
 amplify/team-provider-info.json

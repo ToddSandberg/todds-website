@@ -17,7 +17,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "browserslist": {
     "production": [
@@ -36,14 +38,18 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-istanbul": "^2.0.5",
     "buffer": "^6.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "process": "^0.11.10",
     "vite": "^5.4.0",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "vitest": "^2.0.5"
   }
 }
