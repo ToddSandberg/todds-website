@@ -10,8 +10,10 @@ import { november } from './November2023';
 import { april2024 } from './April2024';
 import { may2024 } from './May2024';
 import { june2024 } from './June2024';
+import { august2024 } from './August2024';
 
 const blogEntryList = [
+    august2024,
     june2024,
     may2024,
     april2024,
@@ -72,7 +74,7 @@ export default function Blog() {
             <h1>Blog</h1>
             <Divider/>
             <div>
-                {blogEntryList.map((entry, index) => <Markdown key={'blogItem'+index}>{entry}</Markdown>)}
+                {blogEntryList.map((entry, index) => <Markdown key={`blogItem${index}`}>{entry}</Markdown>)}
             </div>
         </Tabs>
     </div>;
