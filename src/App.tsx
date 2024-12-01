@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Tabs from './common/Tabs';
-import { background1, blueBackground, darkBlue, orangeBackground, peach, whitishColor } from './constants/colors';
+import { background1, blueBackground, darkBlue, orangeBackground, peach, slightlyDarkerBackground1, whitishColor } from './constants/colors';
 import Home from './home/Home';
 
 /*function fetchColorFromPercent(colorValue1: number, colorValue2: number, sliderValue: number): number {
@@ -18,9 +18,9 @@ function fetchColorFromPercent3(colorValue1: number, colorValue2: number, colorV
 
 function App() {
     const [ color1, setColor1 ] = useState({
-        r: background1.r,
-        g: background1.g,
-        b: background1.b
+        r: slightlyDarkerBackground1.r,
+        g: slightlyDarkerBackground1.g,
+        b: slightlyDarkerBackground1.b
     });
 
     const [ background, setBackground ] = useState({
@@ -54,9 +54,9 @@ function App() {
 
     const changePercentage = useCallback((value: number) => {
         setColor1({
-            r: fetchColorFromPercent3(background1.r, whitishColor.r, peach.r, value),
-            g: fetchColorFromPercent3(background1.g, whitishColor.g, peach.g, value),
-            b: fetchColorFromPercent3(background1.b, whitishColor.b, peach.b, value)
+            r: fetchColorFromPercent3(slightlyDarkerBackground1.r, whitishColor.r, peach.r, value),
+            g: fetchColorFromPercent3(slightlyDarkerBackground1.g, whitishColor.g, peach.g, value),
+            b: fetchColorFromPercent3(slightlyDarkerBackground1.b, whitishColor.b, peach.b, value)
         });
         setBackground({
             r: fetchColorFromPercent3(background1.r, orangeBackground.r, blueBackground.r, value),

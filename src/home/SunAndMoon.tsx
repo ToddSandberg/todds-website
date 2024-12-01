@@ -1,5 +1,3 @@
-import React from 'react';
-
 function fetchSunTop(percent: number, startingTop: number, endingTop: number) {
     return ((endingTop - startingTop)*(percent/100))+startingTop;
 }
@@ -9,7 +7,7 @@ function fetchSunLeft(percent: number) {
     const endingLeft = 40;
 
     // Parabolic function where 100% = 1, 50% = 0, 0% = 1
-    return endingLeft*(Math.pow(percent-50, 2)/2500) + startingLeft;
+    return endingLeft*((percent-50) ** 2/2500) + startingLeft;
 }
 
 type Props = {

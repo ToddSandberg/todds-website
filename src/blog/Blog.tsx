@@ -13,8 +13,10 @@ import { june2024 } from './June2024';
 import { august2024 } from './August2024';
 import { september2024 } from './September2024';
 import { october2024 } from './October2024';
+import { november2024 } from './November2024';
 
 const blogEntryList = [
+    november2024,
     october2024,
     september2024,
     august2024,
@@ -78,7 +80,10 @@ export default function Blog() {
             <h1>Blog</h1>
             <Divider/>
             <div>
-                {blogEntryList.map((entry, index) => <Markdown key={`blogItem${index}`}>{entry}</Markdown>)}
+                {blogEntryList.map((entry, index) => <Markdown key={`blogItem${// biome-ignore lint/suspicious/noArrayIndexKey: index is id here
+                    index}`}>
+                    {entry}
+                </Markdown>)}
             </div>
         </Tabs>
     </div>;

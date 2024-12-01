@@ -5,6 +5,7 @@ import weaponsmith from '../projects/Weaponsmith/WeaponsmithBackground.png';
 import raytracer from './raytracer.png';
 import amazonlogo from '../aboutme/amazonlogo.jpg';
 import DownArrow from './down-arrow.svg?react';
+import ShootingStars from './ShootingStars';
 
 type Props = {
     backgroundColor?: string,
@@ -58,6 +59,7 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
     return <div style={{width: '100%'}}>
         <SunAndMoon currentPercent={currentPercent}/>
         <Hills fill={backgroundColor} className="Hills" style={{ zIndex: 1, position: 'fixed' }}/>
+        <ShootingStars currentPercent={currentPercent}/>
         <div style={{alignContent: 'center', justifyContent: 'center', display: 'flex'}}>
             <div style={{height: '100vh', alignContent: 'center', zIndex: 3}}>
                 <h1>Todd Sandberg</h1>

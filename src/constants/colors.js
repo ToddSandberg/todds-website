@@ -4,6 +4,12 @@ export const background1 = {
     b: 52
 };
 
+export const slightlyDarkerBackground1 = {
+    r: 35,
+    g: 39,
+    b: 46
+};
+
 export const background2 = {
     r: 224,
     g: 184,
