@@ -15,8 +15,10 @@ import { september2024 } from './September2024';
 import { october2024 } from './October2024';
 import { november2024 } from './November2024';
 import { december2024 } from './December2024';
+import { january2025 } from './January2025';
 
 const blogEntryList = [
+    january2025,
     december2024,
     november2024,
     october2024,
