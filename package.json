@@ -5,14 +5,14 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^6.2.2",
     "@headlessui/react": "^2.1.2",
-    "@types/node": "^20.17.19",
-    "@types/react": "^18.3.18",
+    "@types/node": "^20.17.25",
+    "@types/react": "^18.3.19",
     "@types/react-dom": "^18.3.5",
     "aws-amplify": "^6.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.1",
-    "react-router-dom": "^6.29.0",
+    "react-markdown": "^9.1.0",
+    "react-router-dom": "^6.30.0",
     "typescript": "^5.5.2"
   },
   "scripts": {
@@ -43,15 +43,15 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "@vitest/coverage-istanbul": "^2.1.9",
+    "@vitest/coverage-istanbul": "^3.0.9",
     "buffer": "^6.0.3",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.34.1",
     "jsdom": "^26.0.0",
     "process": "^0.11.10",
-    "sass-embedded": "^1.81.0",
+    "sass-embedded": "^1.86.0",
     "vite": "^6.1.0",
     "vite-plugin-svgr": "^4.3.0",
-    "vitest": "^2.1.9"
+    "vitest": "^3.0.9"
   }
 }
