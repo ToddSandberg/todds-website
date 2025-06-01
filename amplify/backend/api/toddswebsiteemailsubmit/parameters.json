@@ -2,5 +2,5 @@
   "AppSyncApiName": "toddswebsiteemailsubmit",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2024-02-28T00:26:05.342Z"
+  "AuthModeLastUpdated": "2025-06-01T16:04:43.146Z"
 }
