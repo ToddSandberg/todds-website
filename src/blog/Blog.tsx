@@ -19,8 +19,10 @@ import { january2025 } from './January2025';
 import { february2025 } from './February2025';
 import { march2025 } from './March2025';
 import { april2025 } from './April2025';
+import { may2025 } from './May2025';
 
 const blogEntryList = [
+    may2025,
     april2025,
     march2025,
     february2025,
