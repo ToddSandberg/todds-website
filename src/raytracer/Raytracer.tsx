@@ -13,6 +13,21 @@ function mix(a: number, b: number, mix: number) {
     return b * mix + a * (1 - mix);
 }
 
+/**
+ * Calculates the Fresnel effect.
+ * The Fresnel effect describes how the reflection of a surface changes based on the viewing angle.
+ * At grazing angles (where the light hits the surface almost parallel to it), the surface becomes more reflective.
+ *
+ * @param facingRatio The dot product of the view direction and the surface normal.
+ * @param mixValue A value to tweak the effect strength.
+ * @returns The Fresnel factor.
+ */
+function calculateFresnelEffect(facingRatio: number, mixValue: number) {
+    // This is an approximation of the Fresnel equations (Schlick's approximation or similar).
+    // Math.pow(1 - facingRatio, 3) increases the reflection as the angle becomes more grazing.
+    return mix(Math.pow(1 - facingRatio, 3), 1, mixValue);
+}
+
 function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], depth: number) {
     let tnear = Number.MAX_SAFE_INTEGER;
     let closestSphere;
@@ -53,14 +68,16 @@ function trace(rayOrigin: Vector3, rayDirection: Vector3, spheres: Sphere[], dep
     const bias = 1e-4; // add some bias to the point from which we will be tracing
     if (((closestSphere.transparency && closestSphere.transparency > 0)
     || (closestSphere.reflectivity && closestSphere.reflectivity > 0)) && depth < MAX_RAY_DEPTH) {
-        // TODO break down the below math
         const facingratio = rayDirection.newReverse().dot(intersectionNormal);
-        // change the mix value to tweak the effect
-        const fresneleffect = mix(Math.pow(1 - facingratio, 3), 1, 0.1);
-        // compute reflection direction (not need to normalize because all vectors
-        // are already normalized)
-        const refldir = rayDirection.minus(intersectionNormal.times(2).times(rayDirection.dot(intersectionNormal)));
+
+        // Calculate the Fresnel effect to determine how much light is reflected vs refracted
+        const fresneleffect = calculateFresnelEffect(facingratio, 0.1);
+
+        // Compute reflection direction using the helper method.
+        const refldir = rayDirection.reflect(intersectionNormal);
+        // We normalize it to ensure the direction vector has length 1.
         refldir.normalize();
+
         const reflection = trace(pointOfIntersection.plus(intersectionNormal.times(bias)), refldir, spheres, depth + 1);
         let refraction = new Vector3(0, 0, 0);
         // if the sphere is also transparent compute refraction ray (transmission)
