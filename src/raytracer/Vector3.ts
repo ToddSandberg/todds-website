@@ -36,5 +36,14 @@ export class Vector3 {
     reverse() { this.x = -this.x; this.y = -this.y; this.z = -this.z; }
     newReverse() { return new Vector3(-this.x, -this.y, -this.z); }
 
+    /**
+     * Reflects the vector around a normal.
+     * Formula: R = V - 2 * (V . N) * N
+     * @param normal The normal vector to reflect around. Should be normalized.
+     */
+    reflect(normal: Vector3) {
+        return this.minus(normal.times(2 * this.dot(normal)));
+    }
+
     toArray() { return [this.x, this.y, this.z]; }
 }
