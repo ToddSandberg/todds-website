@@ -4,10 +4,11 @@ type Props = {
     value: number,
     onChange: (result: number) => void,
     min?: number,
-    max?: number
+    max?: number,
+    ariaLabel?: string
 }
 
-export default function Slider({value, onChange, min, max}: Props) {
+export default function Slider({value, onChange, min, max, ariaLabel}: Props) {
     const [ sliderValue, setSliderValue ] = useState(value);
 
     useEffect(() => {
@@ -20,6 +21,7 @@ export default function Slider({value, onChange, min, max}: Props) {
             value={sliderValue}
             min={min !== undefined ? min : 0}
             max={max !== undefined ? max : 100}
+            aria-label={ariaLabel}
             onChange={(event) => {
                 const newSliderValue = Number.parseInt(event.target.value);
 

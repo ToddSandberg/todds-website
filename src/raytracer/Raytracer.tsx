@@ -186,12 +186,12 @@ export default function Raytracer() {
                 <p>Drag sliders to affect the red ball. Should be able to see shadows and refraction as well.</p>
                 <a href="https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/how-does-it-work.html">Inspired by ScratchaPixel's Raytracer Primer</a>
                 <div>
-                    x: <Slider min={-10} max={10} value={spherePosition.x} onChange={(value) => setSpherePosition(new Vector3(value, spherePosition.y, spherePosition.z))}/>
-                    y: <Slider min={-10} max={10} value={spherePosition.y} onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, value, spherePosition.z))}/>
-                    z: <Slider min={-100} max={0} value={spherePosition.z} onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, spherePosition.y, value))}/>
-                    radius: <Slider min={1} max={10} value={sphereRadius} onChange={(value) => setSphereRadius(value)}/>
-                    reflectivity: <Slider min={0} max={100} value={sphereReflectivity*100} onChange={(value) => setSphereReflectivity(value/100)}/>
-                    transparency: <Slider min={0} max={100} value={sphereTransparency*100} onChange={(value) => setSphereTransparency(value/100)}/>
+                    x: <Slider min={-10} max={10} value={spherePosition.x} ariaLabel="Sphere X position" onChange={(value) => setSpherePosition(new Vector3(value, spherePosition.y, spherePosition.z))}/>
+                    y: <Slider min={-10} max={10} value={spherePosition.y} ariaLabel="Sphere Y position" onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, value, spherePosition.z))}/>
+                    z: <Slider min={-100} max={0} value={spherePosition.z} ariaLabel="Sphere Z position" onChange={(value) => setSpherePosition(new Vector3(spherePosition.x, spherePosition.y, value))}/>
+                    radius: <Slider min={1} max={10} value={sphereRadius} ariaLabel="Sphere Radius" onChange={(value) => setSphereRadius(value)}/>
+                    reflectivity: <Slider min={0} max={100} value={sphereReflectivity*100} ariaLabel="Sphere Reflectivity" onChange={(value) => setSphereReflectivity(value/100)}/>
+                    transparency: <Slider min={0} max={100} value={sphereTransparency*100} ariaLabel="Sphere Transparency" onChange={(value) => setSphereTransparency(value/100)}/>
                     { render([
                         new Sphere(spherePosition, sphereRadius, sphereSurfaceColor, sphereReflectivity, sphereTransparency),
                         new Sphere(new Vector3(5.0, 0, -25), 3, new Vector3(0.65, 0.77, 0.97), 1, 0.0)
