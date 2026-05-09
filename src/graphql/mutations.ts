@@ -70,6 +70,7 @@ export const createContact = /* GraphQL */ `mutation CreateContact(
     id
     name
     email
+    message
     createdAt
     updatedAt
     __typename

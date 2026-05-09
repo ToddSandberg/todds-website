@@ -4,6 +4,7 @@ import { isSmallDevice } from '../common/CommonFunctions';
 import Tabs, { TabType } from '../common/Tabs';
 import './AboutMe.css';
 import Typewriter from './Typewriter';
+import { usePageTitle } from '../common/usePageTitle';
 
 const frontendColor = '#2e8f44';
 const backendColor = '#ba8427';
@@ -18,6 +19,7 @@ const secondParagraph = 'My passion is creating engaging user experiences. In my
 ` My primary back end languages I use are <color:${backendColor}>Java, C#, and Typescript</>.`;
 
 export default function AboutMe() {
+    usePageTitle('About Me');
     return <div className="App">
         <header className="About-Me">
             <Tabs

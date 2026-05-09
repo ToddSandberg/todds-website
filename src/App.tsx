@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
+import { usePageTitle } from './common/usePageTitle';
 import Tabs from './common/Tabs';
 import { background1, blueBackground, darkBlue, orangeBackground, peach, slightlyDarkerBackground1, whitishColor } from './constants/colors';
 import Home from './home/Home';
@@ -17,6 +18,7 @@ function fetchColorFromPercent3(colorValue1: number, colorValue2: number, colorV
 }
 
 function App() {
+    usePageTitle();
     const [ color1, setColor1 ] = useState({
         r: slightlyDarkerBackground1.r,
         g: slightlyDarkerBackground1.g,

@@ -1,8 +1,10 @@
 import Divider from '../../common/Divider';
 import Tabs, { TabType } from '../../common/Tabs';
 import './Weaponsmith.css';
+import { usePageTitle } from '../../common/usePageTitle';
 
 export default function Weaponsmith() {
+    usePageTitle('Weaponsmith Simulator');
     return <div className="App">
         <header className="Weaponsmith">
             <Tabs

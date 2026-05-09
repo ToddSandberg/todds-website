@@ -83,6 +83,7 @@ export type CreateContactInput = {
   id?: string | null,
   name: string,
   email: string,
+  message?: string | null,
 };
 
 export type ModelContactConditionInput = {
@@ -98,6 +99,7 @@ export type Contact = {
   id: string,
   name: string,
   email: string,
+  message?: string | null,
   createdAt: string,
   updatedAt: string,
 };

@@ -3,8 +3,10 @@ import DndAiPic from './CurrentUI.png';
 import TextToSpeechAudio from './tts.wav';
 import Tabs, { TabType } from '../../common/Tabs';
 import './DndAi.css';
+import { usePageTitle } from '../../common/usePageTitle';
 
 export default function DndAi() {
+    usePageTitle('DND AI');
     return <div className='DndAi'>
         <header className='DndAi-App-header'>
             <Tabs

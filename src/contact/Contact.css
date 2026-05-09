@@ -4,13 +4,182 @@
     color: #7288a2;
 }
 
+.ContactContent {
+    font-family: bit;
+}
+
 .ContactContent a:visited {
     color: #7288a2 !important;
 }
 
-.ContactContent {
-    margin: 15px;
+.contact-inner {
+    max-width: 560px;
+    margin: 40px auto;
+    padding: 0 24px 60px;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    color: #1d2a52;
+    margin-bottom: 20px;
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.contact-section-title {
+    font-size: 0.85rem;
     font-family: bit;
+    color: #7288a2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+}
+
+.contact-social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-social-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border: 2px solid #bdb6c6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1d2a52;
+    font-family: bit;
+    font-size: 0.95rem;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.contact-social-card:hover {
+    background-color: #bdb6c6;
+    border-color: #7288a2;
+}
+
+.contact-social-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.contact-intro {
+    color: #7288a2;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.contact-form-wrapper {
+    background-color: #ffffff;
+    border: 2px solid #bdb6c6;
+    border-radius: 8px;
+    padding: 28px 24px;
+}
+
+/* Custom contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-field-label {
+    font-family: bit;
+    font-size: 0.8rem;
+    color: #7288a2;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contact-field-input {
+    font-family: bit;
+    font-size: 0.95rem;
+    background-color: #f3f7fd;
+    border: 2px solid #bdb6c6;
+    border-radius: 6px;
+    color: #1d2a52;
+    padding: 10px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.contact-field-input:focus {
+    border-color: #7288a2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(114, 136, 162, 0.15);
+}
+
+.contact-field-input--error {
+    border-color: #c0392b;
+}
+
+.contact-field-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-field-error {
+    font-family: bit;
+    font-size: 0.8rem;
+    color: #c0392b;
+}
+
+.contact-form-success {
+    font-family: bit;
+    font-size: 0.9rem;
+    color: #2e8f44;
+    margin: 0;
+}
+
+.contact-form-error {
+    font-family: bit;
+    font-size: 0.9rem;
+    color: #c0392b;
+    margin: 0;
+}
+
+.contact-form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-form-submit {
+    font-family: bit;
+    font-size: 0.95rem;
+    background-color: #7288a2;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 28px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.contact-form-submit:hover:not(:disabled) {
+    background-color: #1d2a52;
+}
+
+.contact-form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .Contact-Appbar {

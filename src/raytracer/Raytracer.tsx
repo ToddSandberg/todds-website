@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tabs, { TabType } from '../common/Tabs';
+import { usePageTitle } from '../common/usePageTitle';
 import './Raytracer.css';
 import ImageRenderer from './ImageRenderer';
 import { Vector3 } from './Vector3';
@@ -168,6 +169,7 @@ function render(spheres: Sphere[], pixelSize: number) {
 }
 
 export default function Raytracer() {
+    usePageTitle('Raytracer');
     const [ spherePosition, setSpherePosition ] = useState(new Vector3(0.0, 0, -20));
     const [ sphereRadius, setSphereRadius ] = useState(4);
     const [ sphereSurfaceColor, setSphereSurfaceColor ] = useState(new Vector3(1.0, 0.32, 0.36));

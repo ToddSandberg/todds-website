@@ -2,8 +2,10 @@ import scryportal from './scryportal.png';
 import Tabs, { TabType } from '../../common/Tabs';
 import './ScryPortal.css';
 import { isSmallDevice } from '../../common/CommonFunctions';
+import { usePageTitle } from '../../common/usePageTitle';
 
 export default function ScryPortal() {
+    usePageTitle('ScryPortal');
     return <div className='Scryportal'>
         <header className='Scryportal-App-header'>
             <Tabs

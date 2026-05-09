@@ -1,5 +1,6 @@
 import Tabs from '../common/Tabs';
 import Divider from '../common/Divider';
+import { usePageTitle } from '../common/usePageTitle';
 import Markdown from 'react-markdown';
 import './Blog.css';
 import { december } from './December2023';
@@ -44,45 +45,21 @@ const blogEntryList = [
     november
 ];
 
+function getYear(entry: string): string {
+    const match = entry.match(/^# \w+ (\d{4})/m);
+    return match ? match[1] : 'Unknown';
+}
+
 export default function Blog() {
-    /*const [ entries, setEntries ] = useState<string[]>([]);
+    usePageTitle('Blog');
 
-    const resolveEntries = async () => {
-        const resolveEntries: string[] = [];
-
-        // TODO eventually want to store these entries in the cloud
-        const client = generateClient();
-        const result = await client.graphql({
-            query: listBlogEntries,
-            variables: {}
-        });
-
-        console.log(result);
-        result.data.listBlogEntries.items.forEach((entry) => {
-            // TODO ideally wouldnt need to replace this
-            resolveEntries.push(entry.data ?  entry.data.replaceAll('\\n', '\n') : '');
-        });
-
-        for (const indexIGuess in blogEntryList) {
-            const newEntry = blogEntryList[indexIGuess];
-            await fetch(newEntry)
-                .then((r) => r.text())
-                .then((text: string) => {
-                    console.log(text);
-                    resolveEntries.push(text);
-                });
-        }
-
-        setEntries(blogEntryList);
-    };
-
-    useEffect(() => {
-        resolveEntries();
-    }, []);
-
-    if (entries.length === 0) {
-        return 'loading';
-    }*/
+    const indexedEntries = blogEntryList.map((entry, idx) => ({ entry, year: getYear(entry), idx }));
+    const years = [...new Set(indexedEntries.map(e => e.year))];
+    const byYear: Record<string, typeof indexedEntries> = {};
+    for (const e of indexedEntries) {
+        if (!byYear[e.year]) byYear[e.year] = [];
+        byYear[e.year].push(e);
+    }
 
     return <div className="Blog">
         <Tabs
@@ -91,13 +68,20 @@ export default function Blog() {
             dropdownClass='Blog-Dropdown Dropdown-Common'
             fontClass='blog-font'
         >
-            <h1>Blog</h1>
+            <h1 className="blog-page-title">Blog</h1>
             <Divider/>
-            <div>
-                {blogEntryList.map((entry, index) => <Markdown key={`blogItem${// biome-ignore lint/suspicious/noArrayIndexKey: index is id here
-                    index}`}>
-                    {entry}
-                </Markdown>)}
+            <div className="blog-entries">
+                {years.map(year => (
+                    <div key={year}>
+                        <div className="blog-year-header">{year}</div>
+                        {byYear[year].map(({ entry, idx }) => (
+                            // biome-ignore lint/suspicious/noArrayIndexKey: index is id here
+                            <div key={idx} className="blog-entry-card">
+                                <Markdown>{entry}</Markdown>
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </Tabs>
     </div>;

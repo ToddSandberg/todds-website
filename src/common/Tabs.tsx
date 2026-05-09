@@ -31,9 +31,6 @@ function getTabIndex(selectedTab?: TabType) {
     }
 }
 
-// Contact tab, removed for now while being worked on
-// <Tab style={{backgroundColor}}><a style={linkStyle} href="/contact">Contact</a></Tab>
-
 export default function Tabs({ backgroundColor, textColor, children, selectedTab, appBarClass, appContentClass, dropdownClass, fontClass }: Props) {
     const linkStyle = textColor ? {color: textColor, textDecoration: 'none'} : {textDecoration: 'none'};
 
@@ -43,6 +40,7 @@ export default function Tabs({ backgroundColor, textColor, children, selectedTab
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/">Home</a></Tab>
                 <Tab style={{backgroundColor}}><a style={linkStyle} href="/aboutme">About Me</a></Tab>
                 <Tab><ProjectsMenu color={textColor} backgroundColor={backgroundColor} dropdownClass={dropdownClass} fontClass={fontClass}/></Tab>
+                <Tab style={{backgroundColor}}><a style={linkStyle} href="/contact">Contact</a></Tab>
 
                 <div style={{ float: 'right' }}>
                     <LinkedInIcon/>

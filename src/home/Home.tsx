@@ -28,7 +28,7 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                 <p className='example-text'>{'I\'ve built various websites as personal projects and to support amazon deliveries.'}</p>
                 <p className='example-text'>As an example, below is a TODO list/scheduler react app I wrote.</p>
                 <div className='image-box' style={{ margin: 40 }}>
-                    <a href={'/scryportal'}><img src={scryportal} style={{ width: 300, height: 200 }} alt="productivity website" /></a>
+                    <a href={'/scryportal'}><img src={scryportal} style={{ width: 300, height: 200 }} alt="productivity website" loading="lazy" /></a>
                 </div>
                 <p className='example-text'>And the website you are currently on, see the source code <a href="https://github.com/ToddSandberg/todds-website">here</a></p>
             </div>
@@ -38,11 +38,11 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                 <h2>Video Games</h2>
                 <p className='example-text'>{'I\'ve developed various games for game jams'} (<a href="https://toadtoadtoad.itch.io/">See my itch.io</a>). See one of those projects below.</p>
                 <div className='image-box' style={{ margin: 40 }}>
-                    <a href={'/weaponsmithSimulator'}><img src={weaponsmith} style={{ width: 300, height: 200 }} alt="weaponsmith simulator game" /></a>
+                    <a href={'/weaponsmithSimulator'}><img src={weaponsmith} style={{ width: 300, height: 200 }} alt="weaponsmith simulator game" loading="lazy" /></a>
                 </div>
                 <p className='example-text'>{'I\'ve also implemented various 3D rendering techniques'}. {'See an example "in browser" raytracer written in javascript below.'}</p>
                 <div className='image-box' style={{ margin: 40 }}>
-                    <a href={'/raytracer'}><img src={raytracer} style={{ width: 300, height: 200 }} alt="browser raytracer" /></a>
+                    <a href={'/raytracer'}><img src={raytracer} style={{ width: 300, height: 200 }} alt="browser raytracer" loading="lazy" /></a>
                 </div>
             </div>
         </section>
@@ -51,7 +51,7 @@ export default function Home({backgroundColor, textColor, currentPercent}: Props
                 <h2>Industry Grade Software</h2>
                 <p className='example-text'>At Amazon I helped develop systems that supported customers on a global scale. Read more on the aboutme page.</p>
                 <div className='image-box' style={{ margin: 40 }}>
-                    <a href={'/aboutme'}><img src={amazonlogo} style={{ width: 300, height: 200 }} alt="more about me" /></a>
+                    <a href={'/aboutme'}><img src={amazonlogo} style={{ width: 300, height: 200 }} alt="more about me" loading="lazy" /></a>
                 </div>
             </div>
         </section>
