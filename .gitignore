@@ -28,3 +28,6 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+MEMORY.md
+PROJECT.md
+TASKS.md
